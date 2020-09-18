@@ -1,24 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react'
 import './App.css';
+import Ticker from './Ticker'
 
 function App() {
+
+  const [company, setCompany] = useState([])
+
+    // useEffect(() => {
+    //   async function fetchData() {
+    //     const companyData = await fetch('https://api-v2.intrinio.com/companies/AAPL/fundamentals?api_key=OmVjYjY2ODE4YmFkMjg3MjExNjcwZDU2MzYyMmM2OTQy')
+    //     .then(res => res.json())
+    //     .then(data => setCompany(data))
+    //       // setCompany({data: companyData})
+        
+    //   }
+    //   fetchData()
+     
+    // }, []);
+
+    // console.log(company)
+
+    useEffect(() => {
+     
+       fetch('https://api-v2.intrinio.com/companies/AAPL/fundamentals?api_key=OmVjYjY2ODE4YmFkMjg3MjExNjcwZDU2MzYyMmM2OTQy')
+        .then(res => res.json())
+        .then(data => setCompany(data))
+          // setCompany({data: companyData})
+        
+
+     
+     
+    }, []);
+
+    console.log(company)
+
+ 
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        {/* <p>{company && company.title}</p> */}
+        <Ticker company={company}/>
+
     </div>
   );
 }
