@@ -32,14 +32,14 @@ function App() {
      
     }, []);
 
-    console.log(company)
+    // console.log(company)
 
  
 
 
   return (
     <div className="App">
-        {/* <p>{company && company.title}</p> */}
+        <p>{company.company && company.company.ticker}</p>
         <Ticker company={company}/>
 
     </div>
