@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './App.css';
 import Ticker from './Ticker'
+import News from './News';
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -24,7 +25,7 @@ function App() {
      
     }, []);
 
-    console.log(company.news)
+    // console.log(company.news)
 
  
   if(loading) {
@@ -33,11 +34,11 @@ function App() {
 
   return (
     <div className="App">
-        {company.news && company.news.map(x => 
+        {/* {company.news && company.news.map(x => 
             <p>{x.title}</p>
-        )}
+        )} */}
         <Ticker company={company}/>
-
+        <News news={company} />
     </div>
   );
 }
