@@ -6,10 +6,9 @@ const News = (props) => {
     return (
         <div>
             <p>Test News</p>
-            {props.news.news && props.news.news.map(x => 
-            <p>{x.title}</p>
-        )}
-        {/* {props.news && props.news} */}
+                {props.news.news && props.news.news.map(x => 
+                    <p>{x.title}</p>
+                )}
         </div>
     )
 }

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './App.css';
-import Ticker from './Ticker'
-import News from './News';
+import Ticker from './compoments/Ticker'
+import News from './compoments/News';
 
 function App() {
   const [loading, setLoading] = useState(true)
