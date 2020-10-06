@@ -34,9 +34,6 @@ function App() {
 
   return (
     <div className="App">
-        {/* {company.news && company.news.map(x => 
-            <p>{x.title}</p>
-        )} */}
         <Ticker company={company}/>
         <News news={company} />
     </div>
