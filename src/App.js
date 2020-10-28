@@ -3,6 +3,7 @@ import './App.css';
 import Ticker from './compoments/Ticker'
 import News from './compoments/News';
 import SearchTicker from './compoments/SearchTicker'
+import TickerResults from './compoments/TickerResults'
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -76,6 +77,7 @@ function App() {
   return (
     <div className="App">
         <SearchTicker getTicker={fetchTicker}/>
+        <TickerResults ticker={symbol}/>
         {/* <Ticker company={company}/>
         <News news={company} /> */}
     </div>
