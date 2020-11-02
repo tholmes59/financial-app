@@ -93,7 +93,11 @@ function App() {
             setCompany({data: companyData})
     }
 
-    console.log(company.data)
+    console.log(company.data && company.data.map(x => 
+      x.companyName.split(' ')[0]
+      ))
+
+
  
   // if(loading) {
   //   return <p>loading...</p>
