@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './App.css';
 import Ticker from './compoments/Ticker'
-import News from './compoments/News';
+import NewsData from './compoments/NewsData';
 import SearchTicker from './compoments/SearchTicker'
 import TickerResults from './compoments/TickerResults'
 import SearchCompanyProfile from './compoments/SearchCompanyProfile';
@@ -29,19 +29,19 @@ function App() {
 
     // console.log(company.news)
 
-    useEffect(() => {
+    // useEffect(() => {
     //  setLoading(true)
-      //  fetch('https://api-v2.intrinio.com/companies/GOOG/fundamentals?api_key=OmVjYjY2ODE4YmFkMjg3MjExNjcwZDU2MzYyMmM2OTQy')
-       fetch('https://newsapi.org/v2/top-headlines?q=Apple&apiKey=236f90419a1d4edd8fc1e698c62220af')
-       .then(res => res.json())
-        .then(data => {
-          // setLoading(false)
-          setNews(data)
-        })
-          setNews({data: news})
-    }, []);
+    //    fetch('https://api-v2.intrinio.com/companies/GOOG/fundamentals?api_key=OmVjYjY2ODE4YmFkMjg3MjExNjcwZDU2MzYyMmM2OTQy')
+    //    fetch('https://newsapi.org/v2/top-headlines?q=Apple&apiKey=236f90419a1d4edd8fc1e698c62220af')
+    //    .then(res => res.json())
+    //     .then(data => {
+    //       setLoading(false)
+    //       setNews(data)
+    //     })
+    //       setNews({data: news})
+    // }, []);
 
-    console.log(news)
+    // console.log(news)
 
     // useEffect(() => {
     //   setLoading(true)
@@ -91,14 +91,61 @@ function App() {
           .then(data => data)
             // setLoading(false)
             setCompany({data: companyData})
+
+        // let name = company.data && company.data.map(x => 
+        //   x.companyName.split(' ').shift()
+        //   )
+        // console.log(name)
+        // const companyNews = await fetch(`https://newsapi.org/v2/top-headlines?q=${name}&apiKey=236f90419a1d4edd8fc1e698c62220af`)
+        // .then(res => res.json())
+        // .then(data => data)
+        //   // setLoading(false)
+        //   setNews({data: companyNews})
     }
 
-    console.log(company.data && company.data.map(x => 
-      x.companyName.split(' ')[0]
-      ))
+    console.log(company.data)
 
+    // console.log(company.data && company.data.map(x => 
+    //   x.companyName.split(' ')[0]
+    //   ))
+    
+    // let name = company.data && company.data.map(x => 
+    //     x.companyName.split(' ').shift()
+    //     )
 
+    // let API_URL = `https://newsapi.org/v2/top-headlines?q=${name}&apiKey=236f90419a1d4edd8fc1e698c62220af`
+
+    // useEffect(() => {
+    //   loadNews();
+    // }, []);
+
+    // async function fetchCompanyNews() {
+
+    //     const companyNews = await fetch(`https://newsapi.org/v2/top-headlines?q=${name}&apiKey=236f90419a1d4edd8fc1e698c62220af`)
+    //       .then(res => res.json())
+    //       .then(data => data)
+    //         setNews({data: companyNews})
+    // }
+    // console.log(name)
+    // useEffect(() => {
+    
+    //    fetch(`https://newsapi.org/v2/top-headlines?q=${name}&apiKey=236f90419a1d4edd8fc1e698c62220af`)
+    //    .then(res => res.json())
+    //     .then(data => {
+     
+    //       setNews(data)
+    //     })
+    //       setNews({data: news})
+    // }, []);
+    // console.log(news.data)
  
+    // const loadNews = async () => {
+    //   const response = await fetch(API_URL);
+    //   const data = await response.json();
+    //   setNews(data)
+    // }
+
+    console.log(news)
   // if(loading) {
   //   return <p>loading...</p>
   // }
@@ -106,10 +153,10 @@ function App() {
   return (
     <div className="App">
         <SearchTicker getTicker={fetchTicker}/>
-        <SearchCompanyProfile getCompanyProfile={fetchCompanyProfile}/>
+        <SearchCompanyProfile getCompanyProfile={fetchCompanyProfile} />
         <TickerResults ticker={symbol}/>
-        {/* <Ticker company={company}/>
-        <News news={company} /> */}
+        {/* <Ticker company={company}/> */}
+        <NewsData news={company} />
     </div>
   );
 }
