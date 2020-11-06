@@ -3,12 +3,12 @@ import NewsCard from './NewsCard'
 
 const News = (props) => {
     // console.log(props.news.news && props.news.news)
-    const [news, setNews] = useState([])
+    // const [news, setNews] = useState([])
     console.log(props)
 
-    let name = props.news.data && props.news.data.map(x => 
-        x.companyName.split(' ').shift()
-        )
+    // let name = props.news.data && props.news.data.map(x => 
+    //     x.companyName.split(' ').shift()
+    //     )
 
   
 
@@ -35,18 +35,18 @@ const News = (props) => {
     //           setNews({data: news})
     //     }, []);
 
-    console.log(news)
-    // const newsCards = 
-    //     props.news.news && props.news.news.map(news => 
-    //         <NewsCard key={news.id} news={news}/>
-    //     )
+    // console.log(news)
+    const newsCards = 
+        props.news.data && props.news.data.articles.map(news => 
+            <NewsCard key={news.id} news={news}/>
+        )
 
     return (
         <div>
             <p>Test News</p>
-            {/* <div>
+            <div>
                 {newsCards}
-            </div> */}
+            </div>
         </div>
     )
 }
