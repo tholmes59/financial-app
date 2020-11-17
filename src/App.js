@@ -12,7 +12,7 @@ function App() {
   const [price, setPrice] = useState([])
   const [symbol, setSymbol] = useState([])
   const [news, setNews] = useState([])
-
+  const [logo, setLogo] = useState([])
 
     // useEffect(() => {
     //  setLoading(true)
@@ -98,6 +98,10 @@ function App() {
   // if(loading) {
   //   return <p>loading...</p>
   // }
+
+ 
+
+  console.log(logo)
 
   return (
     <div className="App">
