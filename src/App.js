@@ -99,7 +99,13 @@ function App() {
   //   return <p>loading...</p>
   // }
 
- 
+    async function fetchCompanyLogo(e) {
+      let url = e
+      const companyLogo = await fetch(`https://logo.clearbit.com/${url}`)
+        .then(res => res.json())
+        .then(data => data)
+          setLogo({data: companyLogo})
+    }
 
   console.log(logo)
 
