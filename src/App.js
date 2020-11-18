@@ -82,6 +82,12 @@ function App() {
           )
         console.log(name)
         fetchCompanyNews(name)
+
+        let logoUrl = companyData && companyData.map(x => 
+          x.website
+          )
+        console.log(logoUrl)
+        fetchCompanyLogo(logoUrl)
     }
 
     console.log(company.data)
@@ -101,7 +107,7 @@ function App() {
 
     async function fetchCompanyLogo(e) {
       let url = e
-      const companyLogo = await fetch(`https://logo.clearbit.com/${url}`)
+      const companyLogo = await fetch('https://cors-anywhere.herokuapp.com/' + `https://logo.clearbit.com/${url}`)
         .then(res => res.json())
         .then(data => data)
           setLogo({data: companyLogo})
