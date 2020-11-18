@@ -5,6 +5,7 @@ import News from './compoments/News';
 import SearchTicker from './compoments/SearchTicker'
 import TickerResults from './compoments/TickerResults'
 import SearchCompanyProfile from './compoments/SearchCompanyProfile';
+import CompanyProfile from './compoments/CompanyProfile'
 
 function App() {
   const [loading, setLoading] = useState(true)
