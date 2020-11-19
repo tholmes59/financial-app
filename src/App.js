@@ -121,6 +121,7 @@ function App() {
         <SearchTicker getTicker={fetchTicker}/>
         <SearchCompanyProfile getCompanyProfile={fetchCompanyProfile}/>
         <TickerResults ticker={symbol}/>
+        <CompanyProfile company={company}/>
         <News news={news}/>
         {/* <Ticker company={company}/> */}
         {/* <NewsData news={company} /> */}
