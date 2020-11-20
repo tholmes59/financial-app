@@ -78,6 +78,7 @@ function App() {
             // setLoading(false)
             setCompany({data: companyData})
 
+        fetchPrice(company)
         let name = companyData && companyData.map(x => 
           x.companyName.split(' ').shift()
           )
@@ -89,6 +90,7 @@ function App() {
           )
         console.log(logoUrl)
         fetchCompanyLogo(logoUrl)
+        
     }
 
     console.log(company.data)
@@ -115,6 +117,16 @@ function App() {
     }
 
   console.log(logo)
+
+  async function fetchPrice(e) {
+    let ticker = e
+    const companyPrice = await fetch(`https://financialmodelingprep.com/api/v3/historical-price-full/${ticker}?serietype=line&apikey=3981e8e851120273545312697c324333`)
+      .then(res => res.json())
+      .then(data => data)
+        setPrice({data: companyPrice})
+  }
+
+console.log(price)
 
   return (
     <div className="App">
