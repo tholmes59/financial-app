@@ -6,6 +6,7 @@ import SearchTicker from './compoments/SearchTicker'
 import TickerResults from './compoments/TickerResults'
 import SearchCompanyProfile from './compoments/SearchCompanyProfile';
 import CompanyProfile from './compoments/CompanyProfile'
+import StockChart from './compoments/StockChart'
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -135,6 +136,7 @@ console.log(price)
         <TickerResults ticker={symbol}/>
         <CompanyProfile company={company}/>
         <News news={news}/>
+        <StockChart price={price}/>
         {/* <Ticker company={company}/> */}
         {/* <NewsData news={company} /> */}
     </div>
