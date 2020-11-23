@@ -17,7 +17,9 @@ const StockChart = (props) => {
 
     return (
         <div>
-            <ReactHighcharts config = {config}></ReactHighcharts>
+            {props.price.data && 
+                <ReactHighcharts config = {config}></ReactHighcharts>
+            }
         </div>
     )
 }
