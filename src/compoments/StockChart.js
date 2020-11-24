@@ -32,12 +32,8 @@ const StockChart = (props) => {
         rangeSelector: {
             buttons: [{
               type: 'day',
-              count: 1,
-              text: '1d',
-            }, {
-              type: 'day',
               count: 7,
-              text: '7d'
+              text: '7d',
             }, {
               type: 'month',
               count: 1,
@@ -46,12 +42,19 @@ const StockChart = (props) => {
               type: 'month',
               count: 3,
               text: '3m'
-            },
+            }, {
+              type: 'ytd',
+              text: 'YTD'
+            }, {
+                type: 'year',
+                count: 1,
+                text: '1yr'
+              },
               {
               type: 'all',
               text: 'All'
             }],
-            selected: 4
+            selected: 5
           },
       };
 
