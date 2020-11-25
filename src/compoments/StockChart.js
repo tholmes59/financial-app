@@ -22,7 +22,7 @@ const StockChart = (props) => {
 
     const config = {
         title: {
-          text: 'My stock chart'
+          text: 'Chart'
         },
         series: [
           {
