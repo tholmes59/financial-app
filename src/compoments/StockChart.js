@@ -6,10 +6,12 @@ const StockChart = (props) => {
     console.log(props.price.data && props.price.data.historical.map(x => x.close))
 
     let dataArray = []
-
-    let stockData = props.price.data && props.price.data.historical.reverse()
+   
+    let stockData = props.price.data && props.price.data.historical
     
+    console.log(stockData)
     if(stockData){
+        stockData.reverse()
         for(let i=0; i<stockData.length; i++){
             let tempArray = []
             tempArray.push(new Date(stockData[i].date).getTime(), stockData[i].close)
