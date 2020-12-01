@@ -7,11 +7,23 @@ const StockChart = (props) => {
 
     let dataArray = []
    
-    let stockData = props.price.data && props.price.data.historical
+    let stockData = props.price.data && props.price.data.historical.sort(function compare(a,b){
+        let dateA = new Date(a.date)
+        let dateB = new Date(b.date)
+        return dateA - dateB
+    })
     
     console.log(stockData)
+    // if(stockData) {
+    //     var sortedStockData = stockData.sort(function compare(a,b){
+    //         let dateA = new Date(a.date)
+    //         let dateB = new Date(b.date)
+    //         return dateA - dateB
+    //     })
+
+    // }
+    // console.log(sortedStockData)
     if(stockData){
-        stockData.reverse()
         for(let i=0; i<stockData.length; i++){
             let tempArray = []
             tempArray.push(new Date(stockData[i].date).getTime(), stockData[i].close)
