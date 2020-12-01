@@ -86,11 +86,11 @@ function App() {
         console.log(name)
         fetchCompanyNews(name)
 
-        let logoUrl = companyData && companyData.map(x => 
-          x.website
-          )
-        console.log(logoUrl)
-        fetchCompanyLogo(logoUrl)
+        // let logoUrl = companyData && companyData.map(x => 
+        //   x.website
+        //   )
+        // console.log(logoUrl)
+        // fetchCompanyLogo(logoUrl)
         
     }
 
@@ -109,15 +109,15 @@ function App() {
   //   return <p>loading...</p>
   // }
 
-    async function fetchCompanyLogo(e) {
-      let url = e
-      const companyLogo = await fetch('https://cors-anywhere.herokuapp.com/' + `https://logo.clearbit.com/${url}`)
-        .then(res => res.json())
-        .then(data => data)
-          setLogo({data: companyLogo})
-    }
+    // async function fetchCompanyLogo(e) {
+    //   let url = e
+    //   const companyLogo = await fetch('https://cors-anywhere.herokuapp.com/' + `https://logo.clearbit.com/${url}`)
+    //     .then(res => res.json())
+    //     .then(data => data)
+    //       setLogo({data: companyLogo})
+    // }
 
-  console.log(logo)
+  // console.log(logo)
 
   async function fetchPrice(e) {
     let ticker = e
