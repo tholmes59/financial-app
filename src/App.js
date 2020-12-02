@@ -71,7 +71,7 @@ function App() {
       let company = e.target.ticker.value
       console.log(company)
       e.preventDefault() 
-      
+      e.target.reset()
       // setLoading(true)
         const companyData = await fetch(`https://financialmodelingprep.com/api/v3/profile/${company}?apikey=3981e8e851120273545312697c324333`)
           .then(res => res.json())
