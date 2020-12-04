@@ -43,7 +43,6 @@ const News = (props) => {
 
     return (
         <div>
-            <p>Test News</p>
             <div>
                 {newsCards}
             </div>
