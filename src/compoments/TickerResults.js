@@ -9,7 +9,7 @@ const TickerResults = (props) => {
     }
     return (
         <div id="tickerResults">
-            {props.ticker.data && props.ticker.data.map(x => <p name="ticker" value={x.symbol} onClick={handleClick}>{x.symbol}</p>)}
+            {props.ticker.data && props.ticker.data.map(x => <p name="ticker" value={x.symbol} onClick={handleClick}>{x.symbol} | {x.name}</p>)}
         </div>
     )
 }
