@@ -3,8 +3,10 @@ import ReactHighcharts from 'react-highcharts/ReactHighstock.src'
 
 const StockChart = (props) => {
     console.log(props.price.data && props.price.data)
+    console.log(props.price.data && props.price.data.symbol)
     console.log(props.price.data && props.price.data.historical.map(x => x.close))
 
+    let chartName = props.price.data && props.price.data.symbol
     let dataArray = []
    
     let stockData = props.price.data && props.price.data.historical.sort(function compare(a,b){
@@ -36,7 +38,7 @@ const StockChart = (props) => {
 
     const config = {
         title: {
-          text: 'Chart'
+          text: chartName
         },
         series: [
           {
