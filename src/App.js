@@ -74,7 +74,8 @@ function App() {
       if(e.target.ticker){
         companyTicker = e.target.ticker.value
       } else {
-        companyTicker = e.target.innerHTML;
+        // companyTicker = e.target.innerHTML;
+        companyTicker = e.target.innerHTML.split(' ').shift();
       }
       console.log(companyTicker)
       e.preventDefault() 
