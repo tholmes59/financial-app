@@ -47,7 +47,7 @@ function App() {
       let val = e.target.symbol.value
       // console.log(val)
       e.preventDefault() 
-      
+      e.target.reset()
       // setLoading(true)
         const symbolData = await fetch(`https://financialmodelingprep.com/api/v3/search?query=${val}&apikey=3981e8e851120273545312697c324333`)
           .then(res => res.json())
@@ -68,18 +68,27 @@ function App() {
     //  console.log(symbol.data) 
 
      async function fetchCompanyProfile(e) {
-      let company = e.target.ticker.value
-      console.log(company)
+       console.log(e.target.innerHTML)
+      // let company = e.target.ticker.value
+      let companyTicker = '';
+      if(e.target.ticker){
+        companyTicker = e.target.ticker.value
+      } else {
+        companyTicker = e.target.innerHTML;
+      }
+      console.log(companyTicker)
       e.preventDefault() 
-      e.target.reset()
+      if(e.target.ticker) e.target.reset()
       // setLoading(true)
-        const companyData = await fetch(`https://financialmodelingprep.com/api/v3/profile/${company}?apikey=3981e8e851120273545312697c324333`)
+        const companyData = await fetch(`https://financialmodelingprep.com/api/v3/profile/${companyTicker}?apikey=3981e8e851120273545312697c324333`)
           .then(res => res.json())
           .then(data => data)
-            // setLoading(false)
-            setCompany({data: companyData})
+          setCompany({data: companyData})
 
-        fetchPrice(company)
+            console.log(company)
+
+        fetchPrice(companyTicker)
+
         let name = companyData && companyData.map(x => 
           x.companyName.split(' ').shift()
           )
@@ -98,7 +107,7 @@ function App() {
 
     async function fetchCompanyNews(e) {
         let name = e
-        const companyNews = await fetch(`https://newsapi.org/v2/top-headlines?q=${name}&apiKey=236f90419a1d4edd8fc1e698c62220af`)
+        const companyNews = await fetch(`https://newsapi.org/v2/everything?q=${name}&language=en&apiKey=236f90419a1d4edd8fc1e698c62220af`)
           .then(res => res.json())
           .then(data => data)
             setNews({data: companyNews})
@@ -133,7 +142,7 @@ console.log(price)
     <div className="App">
         <SearchTicker getTicker={fetchTicker}/>
         <SearchCompanyProfile getCompanyProfile={fetchCompanyProfile}/>
-        <TickerResults ticker={symbol}/>
+        <TickerResults ticker={symbol} getTicker={fetchCompanyProfile}/>
         <CompanyProfile company={company}/>
         <News news={news}/>
         <StockChart price={price}/>
