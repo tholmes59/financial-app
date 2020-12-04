@@ -2,9 +2,14 @@ import React from 'react'
 
 const TickerResults = (props) => {
     console.log(props)
+    let handleClick = e => {
+        e.preventDefault()
+        props.getTicker(e)
+        document.getElementById('tickerResults').innerHTML = ''
+    }
     return (
-        <div>
-            {props.ticker.data && props.ticker.data.map(x => <p>{x.symbol} | {x.name}</p>)}
+        <div id="tickerResults">
+            {props.ticker.data && props.ticker.data.map(x => <p name="ticker" value={x.symbol} onClick={handleClick}>{x.symbol}</p>)}
         </div>
     )
 }
