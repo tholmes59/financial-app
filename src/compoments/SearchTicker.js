@@ -7,7 +7,7 @@ const SearchTicker = (props) => {
         <div>
             <form onSubmit={props.getTicker}>
                 <input type="text" name="symbol" placeholder="Enter Compamy Name..."/>
-                <button value="Search" type="submit">
+                <button value="Search Ticker" type="submit">
                 Search
                 </button>
 
