@@ -6,7 +6,7 @@ const SearchCompanyProfile = (props) => {
         <div>
              <form onSubmit={props.getCompanyProfile} >
                 <input type="text" name="ticker" placeholder="Enter Ticker..."/>
-                <button value="Search" type="submit">
+                <button value="Search Company" type="submit">
                 Search
                 </button>
             </form>
