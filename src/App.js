@@ -15,6 +15,7 @@ function App() {
   const [symbol, setSymbol] = useState([])
   const [news, setNews] = useState([])
   const [logo, setLogo] = useState([])
+  const [viewTickers, setViewTickers] = useState(true)
 
     // useEffect(() => {
     //  setLoading(true)
@@ -44,8 +45,9 @@ function App() {
     //  console.log(price)
 
     async function fetchTicker(e) {
+      if(!viewTickers) setViewTickers(true)
       let val = e.target.symbol.value
-      // console.log(val)
+      console.log(val)
       e.preventDefault() 
       e.target.reset()
       // setLoading(true)
@@ -55,6 +57,7 @@ function App() {
             // setLoading(false)
             setSymbol({data: symbolData})
     }
+    console.log(symbol)
       //  useEffect(() => {
       //   setLoading(true)
       //     fetch(`https://financialmodelingprep.com/api/v3/search?query=${ticker}&apikey=3981e8e851120273545312697c324333`)
@@ -101,7 +104,8 @@ function App() {
         //   )
         // console.log(logoUrl)
         // fetchCompanyLogo(logoUrl)
-        
+          // setViewTickers(!viewTickers)
+          if(viewTickers) setViewTickers(false)
     }
 
     console.log(company.data)
@@ -143,7 +147,8 @@ console.log(price)
     <div className="App">
         <SearchTicker getTicker={fetchTicker}/>
         <SearchCompanyProfile getCompanyProfile={fetchCompanyProfile}/>
-        <TickerResults ticker={symbol} getTicker={fetchCompanyProfile}/>
+        {/* <TickerResults ticker={symbol} getTickerResults={fetchCompanyProfile}/> */}
+        {viewTickers && <TickerResults ticker={symbol} getTickerResults={fetchCompanyProfile}/>}
         <CompanyProfile company={company}/>
         <News news={news}/>
         <StockChart price={price}/>
