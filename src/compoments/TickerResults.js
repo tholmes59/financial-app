@@ -1,16 +1,35 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const TickerResults = (props) => {
     console.log(props)
+    
+    // const [viewTickers, setViewTickers] = useState(true)
     let handleClick = e => {
         e.preventDefault()
-        props.getTicker(e)
-        document.getElementById('tickerResults').innerHTML = ''
+        props.getTickerResults(e)
+        // document.getElementById('tickerResults').innerHTML = ''
+        // document.getElementById('tickerResults').remove()
+        // props.setViewTickers(!viewTickers)
+        // console.log(viewTickers)
+        // resetView()
+       
     }
+
+    // const resetView = () => {
+    //     setViewTickers(true)
+    //     }
+    // console.log(viewTickers)
     return (
+        <>
+        {/* {viewTickers && 
         <div id="tickerResults">
-            {props.ticker.data && props.ticker.data.map(x => <p name="ticker" value={x.symbol} onClick={handleClick}>{x.symbol} | {x.name}</p>)}
+            {props.ticker.data && props.ticker.data.map(x => <p name="ticker" onClick={handleClick}>{x.symbol} | {x.name}</p>)}
         </div>
+        } */}
+         <div id="tickerResults">
+            {props.ticker.data && props.ticker.data.map(x => <p name="ticker" onClick={handleClick}>{x.symbol} | {x.name}</p>)}
+        </div>
+        </>
     )
 }
 
