@@ -37,8 +37,8 @@ const News = (props) => {
 
     // console.log(news)
     const newsCards = 
-        props.news.data && props.news.data.articles.map(news => 
-            <NewsCard key={news.id} news={news}/>
+        props.news.data && props.news.data.articles.map((news, id) => 
+            <NewsCard key={id} news={news}/>
         )
 
     return (
