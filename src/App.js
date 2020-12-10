@@ -16,6 +16,7 @@ function App() {
   const [news, setNews] = useState([])
   const [logo, setLogo] = useState([])
   const [viewTickers, setViewTickers] = useState(true)
+  const [keyMetrics, setKeyMetrics] = useState([])
 
     // useEffect(() => {
     //  setLoading(true)
@@ -98,6 +99,7 @@ function App() {
           )
         console.log(name)
         fetchCompanyNews(name)
+        fetchKeyMetrics(companyTicker)
 
         // let logoUrl = companyData && companyData.map(x => 
         //   x.website
@@ -142,6 +144,16 @@ function App() {
   }
 
 console.log(price)
+
+  async function fetchKeyMetrics(e){
+    let ticker = e
+    const companyMetrics = await fetch(`https://financialmodelingprep.com/api/v3/key-metrics-ttm/${ticker}?serietype=line&apikey=3981e8e851120273545312697c324333`)
+      .then(res => res.json())
+      .then(data => data)
+        setKeyMetrics({data: companyMetrics})
+  }
+
+  console.log(keyMetrics)
 
   return (
     <div className="App">
