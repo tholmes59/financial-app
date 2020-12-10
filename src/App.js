@@ -7,6 +7,7 @@ import TickerResults from './compoments/TickerResults'
 import SearchCompanyProfile from './compoments/SearchCompanyProfile';
 import CompanyProfile from './compoments/CompanyProfile'
 import StockChart from './compoments/StockChart'
+import CompanyMetrics from './compoments/CompanyMetrics'
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -162,6 +163,7 @@ console.log(price)
         {/* <TickerResults ticker={symbol} getTickerResults={fetchCompanyProfile}/> */}
         {viewTickers && <TickerResults ticker={symbol} getTickerResults={fetchCompanyProfile}/>}
         <CompanyProfile company={company}/>
+        <CompanyMetrics metrics={keyMetrics}/>
         <News news={news}/>
         <StockChart price={price}/>
         {/* <Ticker company={company}/> */}
