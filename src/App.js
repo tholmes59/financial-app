@@ -148,7 +148,7 @@ console.log(price)
 
   async function fetchKeyMetrics(e){
     let ticker = e
-    const companyMetrics = await fetch(`https://financialmodelingprep.com/api/v3/key-metrics-ttm/${ticker}?serietype=line&apikey=3981e8e851120273545312697c324333`)
+    const companyMetrics = await fetch(`https://financialmodelingprep.com/api/v3/key-metrics-ttm/${ticker}?limit=1&apikey=3981e8e851120273545312697c324333`)
       .then(res => res.json())
       .then(data => data)
         setKeyMetrics({data: companyMetrics})
