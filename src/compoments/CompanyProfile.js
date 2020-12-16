@@ -50,6 +50,7 @@ console.log(percentChange)
         <div>
             {props.company.data && <img alt="CompanyLogo" src={props.company.data.map(x => x.image)}></img>}
             {props.company.data && props.company.data.map(x => <p>{x.companyName} ({x.symbol})</p>)}
+            {props.company.data && props.company.data.map(x => <p>{x.exchangeShortName} - {x.exchange} Currency in {x.currency}</p>)}
             {props.company.data && <p>{price} {<span style={pricePercentageFontColor}>{priceChange}</span>} {<span style={pricePercentageFontColor}>({percentChange})</span>}</p>}
             {props.company.data && props.company.data.map(x => <p>{x.address}</p>)}
             {props.company.data && props.company.data.map(x => <p>{x.city}, {x.state} {x.zip}</p>)}
