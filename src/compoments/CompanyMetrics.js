@@ -16,7 +16,11 @@ const CompanyMetrics = (props) => {
     console.log(marketCap)
     return(
         <div>
-            {props.metrics.data && props.metrics.data.map(x => <p>Market Cap: {x.marketCapTTM}</p>)}
+            {props.metrics.data && props.metrics.data.map(x => <p>Price to Earnings: {(x.peRatioTTM).toFixed(2)}</p>)}
+            {props.metrics.data && props.metrics.data.map(x => <p>Price to Book: {(x.ptbRatioTTM).toFixed(2)}</p>)}
+            {props.metrics.data && props.metrics.data.map(x => <p>Price to Sales: {(x.priceToSalesRatioTTM).toFixed(2)}</p>)}
+            {props.metrics.data && props.metrics.data.map(x => <p>ROE: {(x.roeTTM).toFixed(2)}</p>)}
+            
         </div>
     )
 }
