@@ -3,23 +3,22 @@ import React from 'react'
 const CompanyMetrics = (props) => {
     console.log(props)
     console.log(props.metrics)
-    let marketCap;
-    if((props.metrics.data && props.metrics.data.map(x => x.marketCapTTM)) < 1000000000){
-        marketCap = ((props.metrics.data && props.metrics.data.map(x => x.marketCapTTM))/1000000) + 'M'
+    
+    let peRatio = props.metrics.data && props.metrics.data.map(x => x.peRatioTTM).shift()
+    if(!peRatio) {
+        peRatio = 'N/A'
+    } else {
+        peRatio = peRatio.toFixed(2);
     }
-    if((props.metrics.data && props.metrics.data.map(x => x.marketCapTTM)) < 1000000000000){
-        marketCap = ((props.metrics.data && props.metrics.data.map(x => x.marketCapTTM))/1000000000) + 'B'
-    }
-    else {
-        marketCap = ((props.metrics.data && props.metrics.data.map(x => x.marketCapTTM))/1000000000000) + 'T'
-    }
-    console.log(marketCap)
+    console.log(peRatio)
     return(
         <div>
-            {props.metrics.data && props.metrics.data.map(x => <p>Price to Earnings: {(x.peRatioTTM).toFixed(2)}</p>)}
-            {props.metrics.data && props.metrics.data.map(x => <p>Price to Book: {(x.ptbRatioTTM).toFixed(2)}</p>)}
+            {props.metrics.data && <p>P/E Ratio: {peRatio}</p>}
+            {/* {props.metrics.data && props.metrics.data.map(x => <p>Price to Earnings: {(x.peRatioTTM).toFixed(2)}</p>)}
+            {props.metrics.data && props.metrics.data.map(x => <p>PEG Ratio: {(x.pegRatioTTM).toFixed(2)}</p>)}
+            {props.metrics.data && props.metrics.data.map(x => <p>Price to Book: {(x.priceToBookRatioTTM).toFixed(2)}</p>)}
             {props.metrics.data && props.metrics.data.map(x => <p>Price to Sales: {(x.priceToSalesRatioTTM).toFixed(2)}</p>)}
-            {props.metrics.data && props.metrics.data.map(x => <p>ROE: {(x.roeTTM).toFixed(2)}</p>)}
+            {props.metrics.data && props.metrics.data.map(x => <p>ROE: {(x.returnOnEquityTTM).toFixed(2)}</p>)} */}
             
         </div>
     )
