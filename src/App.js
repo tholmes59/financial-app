@@ -109,12 +109,16 @@ console.log(price)
 
   console.log(keyMetrics)
 
+  function closeTickerWindow(){
+    if(viewTickers) setViewTickers(false)
+  }
+
   return (
     <div className="App">
         <SearchTicker getTicker={fetchTicker}/>
         <SearchCompanyProfile getCompanyProfile={fetchCompanyProfile}/>
         {/* <TickerResults ticker={symbol} getTickerResults={fetchCompanyProfile}/> */}
-        {viewTickers && <TickerResults ticker={symbol} getTickerResults={fetchCompanyProfile}/>}
+        {viewTickers && <TickerResults ticker={symbol} getTickerResults={fetchCompanyProfile} closeWindow={closeTickerWindow}/>}
         {/* <CompanyProfile company={company}/>
         <CompanyMetrics metrics={keyMetrics}/>
         <News news={news}/>
