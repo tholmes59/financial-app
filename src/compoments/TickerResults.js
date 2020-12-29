@@ -27,6 +27,7 @@ const TickerResults = (props) => {
         </div>
         } */}
          <div id="tickerResults">
+             {props.ticker.data && <div onClick={props.closeWindow}>x</div>}
             {props.ticker.data && props.ticker.data.map(x => <p name="ticker" onClick={handleClick}>{x.symbol} | {x.name}</p>)}
         </div>
         </>
