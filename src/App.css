@@ -1,0 +1,19 @@
+
+
+.results-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+/* ***************Company Profile Component**************** */
+
+.full-name-container{
+    display: flex;
+}
+
+.name-container{
+    display: flex;
+    flex-direction: column;
+}
