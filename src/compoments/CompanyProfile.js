@@ -48,14 +48,16 @@ if(priceChange < 0){
 console.log(percentChange)   
     return (
         <div>
+          <div className="name-container">
             {props.company.data && <img alt="CompanyLogo" src={props.company.data.map(x => x.image)}></img>}
-            {props.company.data && props.company.data.map(x => <p>{x.companyName} ({x.symbol})</p>)}
-            {props.company.data && props.company.data.map(x => <p>{x.exchangeShortName} - {x.exchange} Currency in {x.currency}</p>)}
-            {props.company.data && <p>{price} {<span style={pricePercentageFontColor}>{priceChange}</span>} {<span style={pricePercentageFontColor}>({percentChange})</span>}</p>}
-            {props.company.data && props.company.data.map(x => <p>{x.address}</p>)}
-            {props.company.data && props.company.data.map(x => <p>{x.city}, {x.state} {x.zip}</p>)}
-            {props.company.data && props.company.data.map(x => <p>{x.ceo}</p>)}
-            {props.company.data && <p>Market Cap: {marketCap}</p>}
+            {props.company.data && props.company.data.map(x => <div>{x.companyName} ({x.symbol})</div>)}
+            {props.company.data && props.company.data.map(x => <div>{x.exchangeShortName} - {x.exchange} Currency in {x.currency}</div>)}
+          </div>
+            {props.company.data && <div>{price} {<span style={pricePercentageFontColor}>{priceChange}</span>} {<span style={pricePercentageFontColor}>({percentChange})</span>}</div>}
+            {props.company.data && props.company.data.map(x => <div>{x.address}</div>)}
+            {props.company.data && props.company.data.map(x => <div>{x.city}, {x.state} {x.zip}</div>)}
+            {props.company.data && props.company.data.map(x => <div>{x.ceo}</div>)}
+            {props.company.data && <div>Market Cap: {marketCap}</div>}
         </div>
     )
 }
