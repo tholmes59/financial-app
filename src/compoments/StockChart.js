@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactHighcharts from 'react-highcharts/ReactHighstock.src'
+import moment from 'moment'
 
 const StockChart = (props) => {
     console.log(props.price.data && props.price.data)
@@ -36,6 +37,9 @@ const StockChart = (props) => {
 
     console.log(dataArray)
 
+    const options = {style: 'currency', currency: 'USD'};
+    const numberFormat = new Intl.NumberFormat('en-US', options);
+
     const config = {
         title: {
           text: chartName + ' Chart'
@@ -45,6 +49,12 @@ const StockChart = (props) => {
             data: dataArray
           }
         ],
+        tooltip: {
+          shared: true,
+          formatter: function(){
+            return 'Price <b>' + numberFormat.format(this.y) + '</b> on <b>' + moment(this.x).format('MMMM Do YYYY') + '</b>'
+          }
+        },
         rangeSelector: {
             buttons: [{
               type: 'day',
