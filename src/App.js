@@ -1,13 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import './App.css';
-import Ticker from './compoments/Ticker'
-import News from './compoments/News';
 import SearchTicker from './compoments/SearchTicker'
 import TickerResults from './compoments/TickerResults'
 import SearchCompanyProfile from './compoments/SearchCompanyProfile';
-import CompanyProfile from './compoments/CompanyProfile'
-import StockChart from './compoments/StockChart'
-import CompanyMetrics from './compoments/CompanyMetrics'
 import ResultsContainer from './compoments/ResultsContainer';
 
 function App() {
@@ -16,7 +11,6 @@ function App() {
   const [price, setPrice] = useState([])
   const [symbol, setSymbol] = useState([])
   const [news, setNews] = useState([])
-  const [logo, setLogo] = useState([])
   const [viewTickers, setViewTickers] = useState(true)
   const [keyMetrics, setKeyMetrics] = useState([])
 
