@@ -21,12 +21,12 @@ const CompanyMetrics = (props) => {
     }
     return(
         <div>
-            {props.metrics.data && <p>P/E Ratio: {companyMetrics(peRatio)}</p>}
-            {props.metrics.data && <p>PEG Ratio: {companyMetrics(pegRatio)}</p>}
-            {props.metrics.data && <p>P/B: {companyMetrics(pbRatio)}</p>}
-            {props.metrics.data && <p>P/S: {companyMetrics(psRatio)}</p>}
-            {props.metrics.data && <p>ROE: {companyMetrics(roeRatio)}</p>}
-            {props.metrics.data && <p>Dividend Yield: {companyMetrics(dividendYield)}</p>}
+            {props.metrics.data && <div>P/E Ratio: {companyMetrics(peRatio)}</div>}
+            {props.metrics.data && <div>PEG Ratio: {companyMetrics(pegRatio)}</div>}
+            {props.metrics.data && <div>P/B: {companyMetrics(pbRatio)}</div>}
+            {props.metrics.data && <div>P/S: {companyMetrics(psRatio)}</div>}
+            {props.metrics.data && <div>ROE: {companyMetrics(roeRatio)}</div>}
+            {props.metrics.data && <div>Dividend Yield: {companyMetrics(dividendYield)}</div>}
         </div>
     )
 }
