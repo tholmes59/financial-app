@@ -48,10 +48,12 @@ if(priceChange < 0){
 console.log(percentChange)   
     return (
         <div>
-          <div className="name-container">
+          <div className="full-name-container">
             {props.company.data && <img alt="CompanyLogo" src={props.company.data.map(x => x.image)}></img>}
-            {props.company.data && props.company.data.map(x => <div>{x.companyName} ({x.symbol})</div>)}
-            {props.company.data && props.company.data.map(x => <div>{x.exchangeShortName} - {x.exchange} Currency in {x.currency}</div>)}
+            <div className="name-container">
+              {props.company.data && props.company.data.map(x => <div>{x.companyName} ({x.symbol})</div>)}
+              {props.company.data && props.company.data.map(x => <div>{x.exchangeShortName} - {x.exchange} Currency in {x.currency}</div>)}
+            </div>
           </div>
             {props.company.data && <div>{price} {<span style={pricePercentageFontColor}>{priceChange}</span>} {<span style={pricePercentageFontColor}>({percentChange})</span>}</div>}
             {props.company.data && props.company.data.map(x => <div>{x.address}</div>)}
