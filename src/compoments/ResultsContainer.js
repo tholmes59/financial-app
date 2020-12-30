@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import CompanyProfile from './CompanyProfile'
 import StockChart from './StockChart'
 import CompanyMetrics from './CompanyMetrics'
