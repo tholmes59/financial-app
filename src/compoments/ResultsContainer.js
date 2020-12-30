@@ -7,7 +7,7 @@ import News from './News'
 const ResultsContainer = ({company, metrics, news, price}) => {
 
     return(
-        <div>
+        <div className="results-container">
             <CompanyProfile company={company}/>
             <CompanyMetrics metrics={metrics}/>
             <News news={news}/>
