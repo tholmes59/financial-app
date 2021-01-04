@@ -4,6 +4,7 @@ import SearchTicker from './compoments/SearchTicker'
 import TickerResults from './compoments/TickerResults'
 import SearchCompanyProfile from './compoments/SearchCompanyProfile';
 import ResultsContainer from './compoments/ResultsContainer';
+import Header from './compoments/Header';
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -109,8 +110,11 @@ console.log(price)
 
   return (
     <div className="App">
-        <SearchTicker getTicker={fetchTicker}/>
+        <Header />
+      <div className="search-container">
         <SearchCompanyProfile getCompanyProfile={fetchCompanyProfile}/>
+        <SearchTicker getTicker={fetchTicker}/>
+      </div>
         {/* <TickerResults ticker={symbol} getTickerResults={fetchCompanyProfile}/> */}
         {viewTickers && <TickerResults ticker={symbol} getTickerResults={fetchCompanyProfile} closeWindow={closeTickerWindow}/>}
         {/* <CompanyProfile company={company}/>
