@@ -6,7 +6,13 @@ const NewsCard = (props) => {
     return (
         <div>
             <p><a href={props.news.url} target="_blank" rel="noopener noreferrer">{props.news.title}</a></p>
-            <p>{props.news.description}</p>
+            <div>
+                By {props.news.author}
+            </div>
+            <div>
+                {props.news.source.name} - {props.news.publishedAt}
+            </div>
+            <div>{props.news.description}</div>
         </div>
     )
 }
