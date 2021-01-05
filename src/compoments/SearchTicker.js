@@ -5,8 +5,8 @@ const SearchTicker = (props) => {
 
     return (
         <div>
-            <form onSubmit={props.getTicker}>
-                <input type="text" name="symbol" placeholder="Enter Compamy Name..."/>
+            <form onSubmit={props.getTicker} className="search-form">
+                <input type="text" name="symbol" placeholder="Enter Compamy Name..." />
                 <button value="Search Ticker" type="submit">
                     <i class="fa fa-search"></i>
                 </button>
