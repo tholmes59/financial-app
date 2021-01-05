@@ -14,6 +14,7 @@ function App() {
   const [news, setNews] = useState([])
   const [viewTickers, setViewTickers] = useState(true)
   const [keyMetrics, setKeyMetrics] = useState([])
+  const [tickerError, setTickerError] = useState()
 
   async function fetchTicker(e) {
     if(!viewTickers) setViewTickers(true)
@@ -26,7 +27,22 @@ function App() {
         .then(res => res.json())
         .then(data => data)
           // setLoading(false)
-          setSymbol({data: symbolData})
+          if(val){
+            setSymbol({
+              data: symbolData,
+              error: ""
+            })
+          } else {
+            setSymbol({
+              data: "",
+              error: "please enter valid company name"
+            })
+          }
+          if(symbol.data && symbol.data.lastIndexOf === 1){
+            setTickerError({
+              error: "please enter valid company name"
+            })
+          }
   }
   console.log(symbol)
 
@@ -116,7 +132,7 @@ console.log(price)
         <SearchTicker getTicker={fetchTicker}/>
       </div>
         {/* <TickerResults ticker={symbol} getTickerResults={fetchCompanyProfile}/> */}
-        {viewTickers && <TickerResults ticker={symbol} getTickerResults={fetchCompanyProfile} closeWindow={closeTickerWindow}/>}
+        {viewTickers && <TickerResults ticker={symbol} getTickerResults={fetchCompanyProfile} closeWindow={closeTickerWindow} error={tickerError}/>}
         {/* <CompanyProfile company={company}/>
         <CompanyMetrics metrics={keyMetrics}/>
         <News news={news}/>
