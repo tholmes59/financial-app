@@ -4,7 +4,7 @@
 
 .header{
     padding: 4rem;
-    background: rgb(0, 127, 95);
+    background: #003049;
 }
 /* ***********************Search forms**************************** */
 
@@ -12,6 +12,28 @@
     display: flex;
     justify-content: space-between;
     padding: 2rem 4rem;
+}
+
+.search-form input[type=text]{
+    font-size: 17px;
+    border: 1px solid grey;
+    padding: 8px;
+    width: 300px;
+}
+
+.search-form button{
+    padding: 8px;
+    background: #007F5F;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    width: 70px;
+    cursor: pointer;
+}
+
+.search-form button:hover{
+    background: #F77F00;
 }
 
 /* *************************Results********************************* */
