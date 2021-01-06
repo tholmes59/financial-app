@@ -56,3 +56,21 @@
     display: flex;
     flex-direction: column;
 }
+
+/* ************************News Component************************* */
+
+.news-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.news-title{
+    text-decoration: none;
+    color: black;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.news-title:hover{
+    color: #0f69ff;
+}
