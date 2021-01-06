@@ -4,8 +4,8 @@ import React from 'react';
 const NewsCard = (props) => {
     console.log(props)
     return (
-        <div>
-            <p><a href={props.news.url} target="_blank" rel="noopener noreferrer">{props.news.title}</a></p>
+        <div className="news-container">
+            <p><a href={props.news.url} target="_blank" rel="noopener noreferrer" className="news-title">{props.news.title}</a></p>
             <div>
                 By {props.news.author}
             </div>
