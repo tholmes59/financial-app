@@ -9,9 +9,9 @@ const ResultsContainer = ({company, metrics, news, price}) => {
     return(
         <div className="results-container">
             <CompanyProfile company={company}/>
+            <StockChart price={price}/>
             <CompanyMetrics metrics={metrics}/>
             <News news={news}/>
-            <StockChart price={price}/>
         </div>
     )
 }
