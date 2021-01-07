@@ -59,9 +59,11 @@
 
 /* ************************News Component************************* */
 
-.news-container{
+.news-card-container{
     display: flex;
     flex-direction: column;
+    border-top: lightgray solid 1px;
+    margin: 10px 0;
 }
 
 .news-title{
