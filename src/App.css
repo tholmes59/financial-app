@@ -50,11 +50,17 @@
 .full-name-container{
     display: flex;
     align-items: center;
+    margin: 10px 0;
+}
+
+.full-name-container img{
+    width: 60px;
 }
 
 .name-container{
     display: flex;
     flex-direction: column;
+    padding: 10px;
 }
 
 /* ************************News Component************************* */
