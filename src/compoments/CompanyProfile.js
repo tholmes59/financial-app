@@ -56,9 +56,11 @@ console.log(percentChange)
             </div>
           </div>
             {props.company.data && <div><span className="stock-price">{price}</span> {<span style={pricePercentageFontColor}>{priceChange}</span>} {<span style={pricePercentageFontColor}>({percentChange})</span>}</div>}
-            {props.company.data && props.company.data.map(x => <div>{x.address}</div>)}
-            {props.company.data && props.company.data.map(x => <div>{x.city}, {x.state} {x.zip}</div>)}
-            {props.company.data && props.company.data.map(x => <div>{x.ceo}</div>)}
+            <div className="address">
+              {props.company.data && props.company.data.map(x => <div>{x.address}</div>)}
+              {props.company.data && props.company.data.map(x => <div>{x.city}, {x.state} {x.zip}</div>)}
+              {props.company.data && props.company.data.map(x => <div>{x.ceo}</div>)}
+            </div>
             {props.company.data && <div>Market Cap: {marketCap}</div>}
             {props.company.data && props.company.data.map(x => <div>{x.description}</div>)}
         </div>
