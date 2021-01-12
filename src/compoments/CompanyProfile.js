@@ -62,7 +62,9 @@ console.log(percentChange)
               {props.company.data && props.company.data.map(x => <div>{x.ceo}</div>)}
             </div>
             {props.company.data && <div>Market Cap: {marketCap}</div>}
-            {props.company.data && props.company.data.map(x => <div>{x.description}</div>)}
+            <div className="company-description">
+              {props.company.data && props.company.data.map(x => <div>{x.description}</div>)}
+            </div>
         </div>
     )
 }
