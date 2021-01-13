@@ -129,10 +129,12 @@ console.log(price)
         <Header />
       <div className="search-container">
         <SearchCompanyProfile getCompanyProfile={fetchCompanyProfile}/>
-        <SearchTicker getTicker={fetchTicker}/>
+        <div>
+          <SearchTicker getTicker={fetchTicker}/>
+          {viewTickers && <TickerResults ticker={symbol} getTickerResults={fetchCompanyProfile} closeWindow={closeTickerWindow} error={tickerError}/>}
+        </div>
       </div>
         {/* <TickerResults ticker={symbol} getTickerResults={fetchCompanyProfile}/> */}
-        {viewTickers && <TickerResults ticker={symbol} getTickerResults={fetchCompanyProfile} closeWindow={closeTickerWindow} error={tickerError}/>}
         {/* <CompanyProfile company={company}/>
         <CompanyMetrics metrics={keyMetrics}/>
         <News news={news}/>
