@@ -10,7 +10,12 @@ const CompanyMetrics = (props) => {
     let psRatio = props.metrics.data && props.metrics.data.map(x => x.priceToSalesRatioTTM)
     let roeRatio = props.metrics.data && props.metrics.data.map(x => x.returnOnEquityTTM)
     let dividendYield = props.metrics.data && props.metrics.data.map(x => x.dividendYieldTTM)
-  
+    let cashRatio = props.metrics.data && props.metrics.data.map(x => x.cashRatioTTM)
+    let assetTurnover = props.metrics.data && props.metrics.data.map(x => x.assetTurnoverTTM)
+    let capitalExpenditureCoverageRatio = props.metrics.data && props.metrics.data.map(x => x.capitalExpenditureCoverageRatioTTM)
+    let cashConversionCycle = props.metrics.data && props.metrics.data.map(x => x.cashConversionCycleTTM)
+    let cashFlowCoverageRatios = props.metrics.data && props.metrics.data.map(x => x.cashFlowCoverageRatiosTTM)
+    
     function companyMetrics(metric){
         let value = metric.shift()
         if(!value) {
