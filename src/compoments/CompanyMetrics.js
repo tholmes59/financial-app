@@ -15,6 +15,11 @@ const CompanyMetrics = (props) => {
     let capitalExpenditureCoverageRatio = props.metrics.data && props.metrics.data.map(x => x.capitalExpenditureCoverageRatioTTM)
     let cashConversionCycle = props.metrics.data && props.metrics.data.map(x => x.cashConversionCycleTTM)
     let cashFlowCoverageRatios = props.metrics.data && props.metrics.data.map(x => x.cashFlowCoverageRatiosTTM)
+    let cashFlowToDebtRatio = props.metrics.data && props.metrics.data.map(x => x.cashFlowToDebtRatioTTM)
+    let cashPerShare = props.metrics.data && props.metrics.data.map(x => x.cashPerShareTTM)
+    let companyEquityMultiplier = props.metrics.data && props.metrics.data.map(x => x.companyEquityMultiplierTTM)
+    let currentRatio = props.metrics.data && props.metrics.data.map(x => x.currentRatioTTM)
+    let daysOfInvestoryOutstanding = props.metrics.data && props.metrics.data.map(x => x.daysOfInvestoryOutstandingTTM)
     
     function companyMetrics(metric){
         let value = metric.shift()
