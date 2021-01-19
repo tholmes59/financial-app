@@ -20,6 +20,14 @@ const CompanyMetrics = (props) => {
     let companyEquityMultiplier = props.metrics.data && props.metrics.data.map(x => x.companyEquityMultiplierTTM)
     let currentRatio = props.metrics.data && props.metrics.data.map(x => x.currentRatioTTM)
     let daysOfInvestoryOutstanding = props.metrics.data && props.metrics.data.map(x => x.daysOfInvestoryOutstandingTTM)
+    let daysOfPayablesOutstanding = props.metrics.data && props.metrics.data.map(x => x.daysOfPayablesOutstandingTTM)
+    let daysOfSalesOutstanding = props.metrics.data && props.metrics.data.map(x => x.daysOfSalesOutstandingTTM)
+    let debtEquityRatio = props.metrics.data && props.metrics.data.map(x => x.debtEquityRatioTTM)
+    let debtRatio = props.metrics.data && props.metrics.data.map(x => x.debtRatioTTM)
+    let dividendPaidAndCapexCoverageRatio = props.metrics.data && props.metrics.data.map(x => x.dividendPaidAndCapexCoverageRatioTTM)
+    let dividendYieldPercentage = props.metrics.data && props.metrics.data.map(x => x.dividendYieldPercentageTTM)
+    let ebitPerRevenue = props.metrics.data && props.metrics.data.map(x => x.ebitPerRevenueTTM)
+    let ebtPerEbit = props.metrics.data && props.metrics.data.map(x => x.ebtPerEbitTTM)
     
     function companyMetrics(metric){
         let value = metric.shift()
