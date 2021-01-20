@@ -4,8 +4,11 @@ import StockChart from './StockChart'
 import CompanyMetrics from './CompanyMetrics'
 import News from './News'
 
-const ResultsContainer = ({company, metrics, news, price}) => {
+const ResultsContainer = ({company, metrics, news, price, loading}) => {
 
+    if (loading) {
+        return <h2>Loading...</h2>
+    }
     return(
         <div className="results-container">
             <CompanyProfile company={company}/>
