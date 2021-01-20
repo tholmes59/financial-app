@@ -7,7 +7,7 @@ import ResultsContainer from './compoments/ResultsContainer';
 import Header from './compoments/Header';
 
 function App() {
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false)
   const [company, setCompany] = useState([])
   const [price, setPrice] = useState([])
   const [symbol, setSymbol] = useState([])
@@ -139,7 +139,7 @@ console.log(price)
         <CompanyMetrics metrics={keyMetrics}/>
         <News news={news}/>
         <StockChart price={price}/> */}
-        <ResultsContainer company={company} metrics={keyMetrics} news={news} price={price}/>
+        <ResultsContainer company={company} metrics={keyMetrics} news={news} price={price} loading={loading}/>
     </div>
   );
 }
