@@ -15,6 +15,23 @@ const TickerResults = (props) => {
        
     }
 
+    if (props.tickerError){
+        return(
+            <div id="tickerResults">
+            {props.tickerError && <div onClick={props.closeWindow}>x</div>}
+            {props.tickerError && <p>{props.tickerError}</p>}
+        </div>
+        )
+    }
+
+    if (props.ticker.error){
+        return(
+            <div id="tickerResults">
+            {props.ticker.error && <div onClick={props.closeWindow}>x</div>}
+            {props.ticker.error && <p>{props.ticker.error}</p>}
+        </div>
+        )
+    }
     // const resetView = () => {
     //     setViewTickers(true)
     //     }
@@ -26,11 +43,14 @@ const TickerResults = (props) => {
             {props.ticker.data && props.ticker.data.map(x => <p name="ticker" onClick={handleClick}>{x.symbol} | {x.name}</p>)}
         </div>
         } */}
+        {props.ticker.data && 
          <div id="tickerResults">
             {props.ticker.data && <div onClick={props.closeWindow}>x</div>}
             {props.ticker.data && props.ticker.data.map(x => <p name="ticker" onClick={handleClick}>{x.symbol} | {x.name} | {x.exchangeShortName}</p>)}
             {props.ticker.error && <p>{props.ticker.error}</p>}
         </div>
+        
+        }
         </>
     )
 }
