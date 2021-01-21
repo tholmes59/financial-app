@@ -38,13 +38,15 @@ function App() {
               error: "please enter valid company name"
             })
           }
-          if(symbol.data && symbol.data.lastIndexOf === 1){
-            setTickerError({
-              error: "please enter valid company name"
-            })
+          if(symbol.data && symbol.data.length === undefined){
+            setTickerError(
+              "please enter valid company name"
+            )
           }
   }
   console.log(symbol)
+  console.log(symbol.data && symbol.data.length)
+  console.log(tickerError)
 
   async function fetchCompanyProfile(e) {
     console.log(e.target.innerHTML)
@@ -131,7 +133,7 @@ console.log(price)
         <SearchCompanyProfile getCompanyProfile={fetchCompanyProfile}/>
         <div>
           <SearchTicker getTicker={fetchTicker}/>
-          {viewTickers && <TickerResults ticker={symbol} getTickerResults={fetchCompanyProfile} closeWindow={closeTickerWindow} error={tickerError}/>}
+          {viewTickers && <TickerResults ticker={symbol} getTickerResults={fetchCompanyProfile} closeWindow={closeTickerWindow} tickerError={tickerError}/>}
         </div>
       </div>
         {/* <TickerResults ticker={symbol} getTickerResults={fetchCompanyProfile}/> */}
