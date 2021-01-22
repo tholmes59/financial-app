@@ -28,6 +28,14 @@ const CompanyMetrics = (props) => {
     let dividendYieldPercentage = props.metrics.data && props.metrics.data.map(x => x.dividendYieldPercentageTTM)
     let ebitPerRevenue = props.metrics.data && props.metrics.data.map(x => x.ebitPerRevenueTTM)
     let ebtPerEbit = props.metrics.data && props.metrics.data.map(x => x.ebtPerEbitTTM)
+    let effectiveTaxRate = props.metrics.data && props.metrics.data.map(x => x.effectiveTaxRateTTM)
+    let enterpriseValueMultiple = props.metrics.data && props.metrics.data.map(x => x.enterpriseValueMultipleTTM)
+    let fixedAssetTurover = props.metrics.data && props.metrics.data.map(x => x.fixedAssetTuroverTTM)
+    let freeCashFlowOperatingCashFlowRatio = props.metrics.data && props.metrics.data.map(x => x.freeCashFlowOperatingCashFlowRatioTTM)
+    let freeCashFlowPerShare = props.metrics.data && props.metrics.data.map(x => x.freeCashFlowPerShareTTM)
+    let grossProfitMargin = props.metrics.data && props.metrics.data.map(x => x.grossProfitMarginTTM)
+    let interestCoverage = props.metrics.data && props.metrics.data.map(x => x.interestCoverageTTM)
+    let inventoryTurnover = props.metrics.data && props.metrics.data.map(x => x.inventoryTurnoverTTM)
     
     function companyMetrics(metric){
         let value = metric.shift()
