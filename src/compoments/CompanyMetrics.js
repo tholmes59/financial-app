@@ -36,6 +36,16 @@ const CompanyMetrics = (props) => {
     let grossProfitMargin = props.metrics.data && props.metrics.data.map(x => x.grossProfitMarginTTM)
     let interestCoverage = props.metrics.data && props.metrics.data.map(x => x.interestCoverageTTM)
     let inventoryTurnover = props.metrics.data && props.metrics.data.map(x => x.inventoryTurnoverTTM)
+    let longTermDebtToCapitalization = props.metrics.data && props.metrics.data.map(x => x.longTermDebtToCapitalizationTTM)
+    let netIncomePerEBT = props.metrics.data && props.metrics.data.map(x => x.netIncomePerEBTTTM)
+    let netProfitMargin = props.metrics.data && props.metrics.data.map(x => x.netProfitMarginTTM)
+    let operatingCashFlowPerShare = props.metrics.data && props.metrics.data.map(x => x.operatingCashFlowPerShareTTM)
+    let operatingCashFlowSalesRatio = props.metrics.data && props.metrics.data.map(x => x.operatingCashFlowSalesRatioTTM)
+    let operatingCycle = props.metrics.data && props.metrics.data.map(x => x.operatingCycleTTM)
+    let operatingProfitMargin = props.metrics.data && props.metrics.data.map(x => x.operatingProfitMarginTTM)
+    let payablesTurnover = props.metrics.data && props.metrics.data.map(x => x.payablesTurnoverTTM)
+    let payoutRatio = props.metrics.data && props.metrics.data.map(x => x.payoutRatioTTM)
+    let preTaxProfitMargin = props.metrics.data && props.metrics.data.map(x => x.preTaxProfitMarginTTM)
     
     function companyMetrics(metric){
         let value = metric.shift()
