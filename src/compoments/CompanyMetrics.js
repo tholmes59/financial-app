@@ -45,7 +45,20 @@ const CompanyMetrics = (props) => {
     let operatingProfitMargin = props.metrics.data && props.metrics.data.map(x => x.operatingProfitMarginTTM)
     let payablesTurnover = props.metrics.data && props.metrics.data.map(x => x.payablesTurnoverTTM)
     let payoutRatio = props.metrics.data && props.metrics.data.map(x => x.payoutRatioTTM)
-    let preTaxProfitMargin = props.metrics.data && props.metrics.data.map(x => x.preTaxProfitMarginTTM)
+    let preTaxProfitMargin = props.metrics.data && props.metrics.data.map(x => x.pretaxProfitMarginTTM)
+
+    function example(val){
+        return props.metrics.data && props.metrics.data.map(x => x[val])
+    }
+    function example2(val){
+        let num = props.metrics.data && props.metrics.data.map(x => x[val])
+        let value = num.shift()
+        if(!value) {
+            return 'N/A'
+        } else {
+            return value.toFixed(2);
+        }
+    }
     
     function companyMetrics(metric){
         let value = metric.shift()
@@ -66,6 +79,8 @@ const CompanyMetrics = (props) => {
                 {props.metrics.data && <div>P/S: {companyMetrics(psRatio)}</div>}
                 {props.metrics.data && <div>ROE: {companyMetrics(roeRatio)}</div>}
                 {props.metrics.data && <div>Dividend Yield: {companyMetrics(dividendYield)}</div>}
+                {props.metrics.data && <div>Pre Tax: {companyMetrics(example('peRatioTTM'))}</div>}
+                {props.metrics.data && <div>Pre Tax2: {example2('peRatioTTM')}</div>}
             </div>
         )}
         </>
