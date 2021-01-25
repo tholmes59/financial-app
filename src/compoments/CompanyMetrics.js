@@ -4,12 +4,6 @@ const CompanyMetrics = (props) => {
     console.log(props)
     console.log(props.metrics)
     
-    let peRatio = props.metrics.data && props.metrics.data.map(x => x.peRatioTTM)
-    let pegRatio = props.metrics.data && props.metrics.data.map(x => x.pegRatioTTM)
-    let pbRatio = props.metrics.data && props.metrics.data.map(x => x.priceToBookRatioTTM)
-    let psRatio = props.metrics.data && props.metrics.data.map(x => x.priceToSalesRatioTTM)
-    let roeRatio = props.metrics.data && props.metrics.data.map(x => x.returnOnEquityTTM)
-    let dividendYield = props.metrics.data && props.metrics.data.map(x => x.dividendYieldTTM)
     let cashRatio = props.metrics.data && props.metrics.data.map(x => x.cashRatioTTM)
     let assetTurnover = props.metrics.data && props.metrics.data.map(x => x.assetTurnoverTTM)
     let capitalExpenditureCoverageRatio = props.metrics.data && props.metrics.data.map(x => x.capitalExpenditureCoverageRatioTTM)
@@ -47,10 +41,10 @@ const CompanyMetrics = (props) => {
     let payoutRatio = props.metrics.data && props.metrics.data.map(x => x.payoutRatioTTM)
     let preTaxProfitMargin = props.metrics.data && props.metrics.data.map(x => x.pretaxProfitMarginTTM)
 
-    function example(val){
-        return props.metrics.data && props.metrics.data.map(x => x[val])
-    }
-    function example2(val){
+    // function example(val){
+    //     return props.metrics.data && props.metrics.data.map(x => x[val])
+    // }
+    function companyMetrics(val){
         let num = props.metrics.data && props.metrics.data.map(x => x[val])
         let value = num.shift()
         if(!value) {
@@ -60,27 +54,26 @@ const CompanyMetrics = (props) => {
         }
     }
     
-    function companyMetrics(metric){
-        let value = metric.shift()
-        if(!value) {
-            return 'N/A'
-        } else {
-            return value.toFixed(2);
-        }
-    }
+    // function companyMetrics(metric){
+    //     let value = metric.shift()
+    //     if(!value) {
+    //         return 'N/A'
+    //     } else {
+    //         return value.toFixed(2);
+    //     }
+    // }
     return(
         <>
         {props.metrics.data && (
             <div>
                 <div>Valuation Metrics</div>
-                {props.metrics.data && <div>P/E Ratio: {companyMetrics(peRatio)}</div>}
-                {props.metrics.data && <div>PEG Ratio: {companyMetrics(pegRatio)}</div>}
-                {props.metrics.data && <div>P/B: {companyMetrics(pbRatio)}</div>}
-                {props.metrics.data && <div>P/S: {companyMetrics(psRatio)}</div>}
-                {props.metrics.data && <div>ROE: {companyMetrics(roeRatio)}</div>}
-                {props.metrics.data && <div>Dividend Yield: {companyMetrics(dividendYield)}</div>}
-                {props.metrics.data && <div>Pre Tax: {companyMetrics(example('peRatioTTM'))}</div>}
-                {props.metrics.data && <div>Pre Tax2: {example2('peRatioTTM')}</div>}
+                {props.metrics.data && <div>P/E Ratio: {companyMetrics('peRatioTTM')}</div>}
+                {props.metrics.data && <div>PEG Ratio: {companyMetrics('pegRatioTTM')}</div>}
+                {props.metrics.data && <div>P/B: {companyMetrics('priceToBookRatioTTM')}</div>}
+                {props.metrics.data && <div>P/S: {companyMetrics('priceToSalesRatioTTM')}</div>}
+                {props.metrics.data && <div>ROE: {companyMetrics('returnOnEquityTTM')}</div>}
+                {props.metrics.data && <div>Dividend Yield: {companyMetrics('dividendYieldTTM')}</div>}
+                {props.metrics.data && <div>Pre Tax2: {companyMetrics('peRatioTTM')}</div>}
             </div>
         )}
         </>
