@@ -89,21 +89,21 @@ const CompanyMetrics = (props) => {
                 {props.metrics.data && <div>Debt Ratio: {companyMetrics('debtRatioTTM')}</div>}
                 {props.metrics.data && <div>Dividend Paid and Capex Coverage Ratio: {companyMetrics('dividendPaidAndCapexCoverageRatioTTM')}</div>}
                 {props.metrics.data && <div>Divident Yield %: {companyMetrics('dividendYielPercentageTTM')}</div>}
-                {props.metrics.data && <div>: {companyMetrics('ebitPerRevenueTTM')}</div>}
-                {props.metrics.data && <div>: {companyMetrics('ebtPerEbitTTM')}</div>}
-                {props.metrics.data && <div>: {companyMetrics('effectiveTaxRateTTM')}</div>}
-                {props.metrics.data && <div>: {companyMetrics('enterpriseValueMultipleTTM')}</div>}
-                {props.metrics.data && <div>: {companyMetrics('fixedAssetTurnoverTTM')}</div>}
-                {props.metrics.data && <div>: {companyMetrics('freeCashFlowOperatingCashFlowRatioTTM')}</div>}
-                {props.metrics.data && <div>: {companyMetrics('freeCashFlowPerShareTTM')}</div>}
-                {props.metrics.data && <div>: {companyMetrics('grossProfitMarginTTM')}</div>}
-                {props.metrics.data && <div>: {companyMetrics('interestCoverageTTM')}</div>}
-                {props.metrics.data && <div>: {companyMetrics('inventoryTurnoverTTM')}</div>}
-                {props.metrics.data && <div>: {companyMetrics('longTermDebtToCapitalizationTTM')}</div>}
-                {props.metrics.data && <div>: {companyMetrics('netIncomePerEBTTTM')}</div>}
-                {props.metrics.data && <div>: {companyMetrics('netProfitMarginTTM')}</div>}
-                {props.metrics.data && <div>: {companyMetrics('operatingCashFlowPerShareTTM')}</div>}
-                {props.metrics.data && <div>: {companyMetrics('operatingCashFlowSalesRatioTTM')}</div>}
+                {props.metrics.data && <div>EBIT per Revenue: {companyMetrics('ebitPerRevenueTTM')}</div>}
+                {props.metrics.data && <div>EBT per EBIT: {companyMetrics('ebtPerEbitTTM')}</div>}
+                {props.metrics.data && <div>Effective Tax Rate: {companyMetrics('effectiveTaxRateTTM')}</div>}
+                {props.metrics.data && <div>Enterprise Value Multiple: {companyMetrics('enterpriseValueMultipleTTM')}</div>}
+                {props.metrics.data && <div>Fixed Asset Turnover: {companyMetrics('fixedAssetTurnoverTTM')}</div>}
+                {props.metrics.data && <div>Free Cash Flow to Operating Cash Flow Ratio: {companyMetrics('freeCashFlowOperatingCashFlowRatioTTM')}</div>}
+                {props.metrics.data && <div>Free Cash FLow per Share: {companyMetrics('freeCashFlowPerShareTTM')}</div>}
+                {props.metrics.data && <div>Gross Profit Margin: {companyMetrics('grossProfitMarginTTM')}</div>}
+                {props.metrics.data && <div>Interest Coverage Ratio: {companyMetrics('interestCoverageTTM')}</div>}
+                {props.metrics.data && <div>Inventory Turnover: {companyMetrics('inventoryTurnoverTTM')}</div>}
+                {props.metrics.data && <div>Long Term Debt to Capitalization: {companyMetrics('longTermDebtToCapitalizationTTM')}</div>}
+                {props.metrics.data && <div>Net Income per EBT: {companyMetrics('netIncomePerEBTTTM')}</div>}
+                {props.metrics.data && <div>Net Profit Margin: {companyMetrics('netProfitMarginTTM')}</div>}
+                {props.metrics.data && <div>Operating Cash Flow per Share: {companyMetrics('operatingCashFlowPerShareTTM')}</div>}
+                {props.metrics.data && <div>Operating Cash Flow to Sales Ratio: {companyMetrics('operatingCashFlowSalesRatioTTM')}</div>}
                 {props.metrics.data && <div>: {companyMetrics('operatingCycleTTM')}</div>}
                 {props.metrics.data && <div>: {companyMetrics('operatingProfitMarginTTM')}</div>}
                 {props.metrics.data && <div>: {companyMetrics('payablesTurnoverTTM')}</div>}
