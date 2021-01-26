@@ -104,22 +104,22 @@ const CompanyMetrics = (props) => {
                 {props.metrics.data && <div>Net Profit Margin: {companyMetrics('netProfitMarginTTM')}</div>}
                 {props.metrics.data && <div>Operating Cash Flow per Share: {companyMetrics('operatingCashFlowPerShareTTM')}</div>}
                 {props.metrics.data && <div>Operating Cash Flow to Sales Ratio: {companyMetrics('operatingCashFlowSalesRatioTTM')}</div>}
-                {props.metrics.data && <div>: {companyMetrics('operatingCycleTTM')}</div>}
-                {props.metrics.data && <div>: {companyMetrics('operatingProfitMarginTTM')}</div>}
-                {props.metrics.data && <div>: {companyMetrics('payablesTurnoverTTM')}</div>}
-                {props.metrics.data && <div>: {companyMetrics('payoutRatioTTM')}</div>}
-                {props.metrics.data && <div>: {companyMetrics('pretaxProfitMarginTTM')}</div>}
-                {props.metrics.data && <div>: {companyMetrics('priceCashFlowRatioTTM')}</div>}
-                {props.metrics.data && <div>: {companyMetrics('priceFairValueTTM')}</div>}
-                {props.metrics.data && <div>: {companyMetrics('priceToFreeCashFlowsRatioTTM')}</div>}
-                {props.metrics.data && <div>: {companyMetrics('priceToOperatingCashFlowsRatioTTM')}</div>}
-                {props.metrics.data && <div>: {companyMetrics('quickRatioTTM')}</div>}
-                {props.metrics.data && <div>: {companyMetrics('receivablesTurnoverTTM')}</div>}
-                {props.metrics.data && <div>: {companyMetrics('returnOnAssetsTTM')}</div>}
-                {props.metrics.data && <div>: {companyMetrics('returnOnCapitalEmployedTTM')}</div>}
-                {props.metrics.data && <div>: {companyMetrics('returnOnEquityTTM')}</div>}
-                {props.metrics.data && <div>: {companyMetrics('shortTermCoverageRatiosTTM')}</div>}
-                {props.metrics.data && <div>: {companyMetrics('totalDebtToCapitalizationTTM')}</div>}
+                {props.metrics.data && <div>Operating Cycle: {companyMetrics('operatingCycleTTM')}</div>}
+                {props.metrics.data && <div>Operating Profit Margin: {companyMetrics('operatingProfitMarginTTM')}</div>}
+                {props.metrics.data && <div>Payables Turnover: {companyMetrics('payablesTurnoverTTM')}</div>}
+                {props.metrics.data && <div>Payout Ratio: {companyMetrics('payoutRatioTTM')}</div>}
+                {props.metrics.data && <div>Pretax Profit Margin: {companyMetrics('pretaxProfitMarginTTM')}</div>}
+                {props.metrics.data && <div>Price to Cash Flow Ratio: {companyMetrics('priceCashFlowRatioTTM')}</div>}
+                {props.metrics.data && <div>Price Fair Value: {companyMetrics('priceFairValueTTM')}</div>}
+                {props.metrics.data && <div>Price to Free Cash Flow Ratio: {companyMetrics('priceToFreeCashFlowsRatioTTM')}</div>}
+                {props.metrics.data && <div>Price to Operating Cash Flow Ratio: {companyMetrics('priceToOperatingCashFlowsRatioTTM')}</div>}
+                {props.metrics.data && <div>Quick Ratio: {companyMetrics('quickRatioTTM')}</div>}
+                {props.metrics.data && <div>Receivables Turnover: {companyMetrics('receivablesTurnoverTTM')}</div>}
+                {props.metrics.data && <div>Return on Assets: {companyMetrics('returnOnAssetsTTM')}</div>}
+                {props.metrics.data && <div>Return on Capital Employed: {companyMetrics('returnOnCapitalEmployedTTM')}</div>}
+                {props.metrics.data && <div>Return on Equity: {companyMetrics('returnOnEquityTTM')}</div>}
+                {props.metrics.data && <div>Short Term Coverage Ratio: {companyMetrics('shortTermCoverageRatiosTTM')}</div>}
+                {props.metrics.data && <div>Total Debt to Capitalization Ratio: {companyMetrics('totalDebtToCapitalizationTTM')}</div>}
             </div>
         )}
         </>
