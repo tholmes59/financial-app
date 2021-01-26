@@ -96,6 +96,24 @@ const CompanyMetrics = (props) => {
                 {props.metrics.data && <div>: {companyMetrics('fixedAssetTurnoverTTM')}</div>}
                 {props.metrics.data && <div>: {companyMetrics('freeCashFlowOperatingCashFlowRatioTTM')}</div>}
                 {props.metrics.data && <div>: {companyMetrics('freeCashFlowPerShareTTM')}</div>}
+                {props.metrics.data && <div>: {companyMetrics('grossProfitMarginTTM')}</div>}
+                {props.metrics.data && <div>: {companyMetrics('interestCoverageTTM')}</div>}
+                {props.metrics.data && <div>: {companyMetrics('inventoryTurnoverTTM')}</div>}
+                {props.metrics.data && <div>: {companyMetrics('longTermDebtToCapitalizationTTM')}</div>}
+                {props.metrics.data && <div>: {companyMetrics('netIncomePerEBTTTM')}</div>}
+                {props.metrics.data && <div>: {companyMetrics('netProfitMarginTTM')}</div>}
+                {props.metrics.data && <div>: {companyMetrics('operatingCashFlowPerShareTTM')}</div>}
+                {props.metrics.data && <div>: {companyMetrics('operatingCashFlowSalesRatioTTM')}</div>}
+                {props.metrics.data && <div>: {companyMetrics('operatingCycleTTM')}</div>}
+                {props.metrics.data && <div>: {companyMetrics('operatingProfitMarginTTM')}</div>}
+                {props.metrics.data && <div>: {companyMetrics('payablesTurnoverTTM')}</div>}
+                {props.metrics.data && <div>: {companyMetrics('payoutRatioTTM')}</div>}
+                {props.metrics.data && <div>: {companyMetrics('pretaxProfitMarginTTM')}</div>}
+                {props.metrics.data && <div>: {companyMetrics('priceCashFlowRatioTTM')}</div>}
+                {props.metrics.data && <div>: {companyMetrics('priceFairValueTTM')}</div>}
+                {props.metrics.data && <div>: {companyMetrics('priceToFreeCashFlowsRatioTTM')}</div>}
+                {props.metrics.data && <div>: {companyMetrics('priceToOperatingCashFlowsRatioTTM')}</div>}
+                {props.metrics.data && <div>: {companyMetrics('quickRatioTTM')}</div>}
             </div>
         )}
         </>
