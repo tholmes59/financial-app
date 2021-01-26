@@ -77,18 +77,18 @@ const CompanyMetrics = (props) => {
                 {props.metrics.data && <div>Asset Turnover: {companyMetrics('assetTurnoverTTM')}</div>}
                 {props.metrics.data && <div>Cap Ex Coverage Ratio: {companyMetrics('capitalExpenditureCoverageRatioTTM')}</div>}
                 {props.metrics.data && <div>Cash Conversion Cycle: {companyMetrics('cashConversionCycleTTM')}</div>}
-                {props.metrics.data && <div>: {companyMetrics('cashFlowCoverageRatiosTTM')}</div>}
-                {props.metrics.data && <div>: {companyMetrics('cashFlowToDebtRatioTTM')}</div>}
-                {props.metrics.data && <div>: {companyMetrics('cashPerShareTTM')}</div>}
-                {props.metrics.data && <div>: {companyMetrics('companyEquityMultiplierTTM')}</div>}
-                {props.metrics.data && <div>: {companyMetrics('currentRatioTTM')}</div>}
-                {props.metrics.data && <div>: {companyMetrics('daysOfInventoryOutstandingTTM')}</div>}
-                {props.metrics.data && <div>: {companyMetrics('daysOfPayablesOutstandingTTM')}</div>}
-                {props.metrics.data && <div>: {companyMetrics('daysOfSalesOutstandingTTM')}</div>}
-                {props.metrics.data && <div>: {companyMetrics('debtEquityRatioTTM')}</div>}
-                {props.metrics.data && <div>: {companyMetrics('debtRatioTTM')}</div>}
-                {props.metrics.data && <div>: {companyMetrics('dividendPaidAndCapexCoverageRatioTTM')}</div>}
-                {props.metrics.data && <div>: {companyMetrics('dividendYielPercentageTTM')}</div>}
+                {props.metrics.data && <div>Cash Flow Coverage Ratio: {companyMetrics('cashFlowCoverageRatiosTTM')}</div>}
+                {props.metrics.data && <div>Cash Flow to Debt Ratio: {companyMetrics('cashFlowToDebtRatioTTM')}</div>}
+                {props.metrics.data && <div>Cash per Share: {companyMetrics('cashPerShareTTM')}</div>}
+                {props.metrics.data && <div>Company Equity Multiplier: {companyMetrics('companyEquityMultiplierTTM')}</div>}
+                {props.metrics.data && <div>Current Ratio: {companyMetrics('currentRatioTTM')}</div>}
+                {props.metrics.data && <div>Days Inventory Outstanding: {companyMetrics('daysOfInventoryOutstandingTTM')}</div>}
+                {props.metrics.data && <div>Days Payables Outstanding: {companyMetrics('daysOfPayablesOutstandingTTM')}</div>}
+                {props.metrics.data && <div>Days Sales Outstanding: {companyMetrics('daysOfSalesOutstandingTTM')}</div>}
+                {props.metrics.data && <div>Debt to Equity Ratio: {companyMetrics('debtEquityRatioTTM')}</div>}
+                {props.metrics.data && <div>Debt Ratio: {companyMetrics('debtRatioTTM')}</div>}
+                {props.metrics.data && <div>Dividend Paid and Capex Coverage Ratio: {companyMetrics('dividendPaidAndCapexCoverageRatioTTM')}</div>}
+                {props.metrics.data && <div>Divident Yield %: {companyMetrics('dividendYielPercentageTTM')}</div>}
                 {props.metrics.data && <div>: {companyMetrics('ebitPerRevenueTTM')}</div>}
                 {props.metrics.data && <div>: {companyMetrics('ebtPerEbitTTM')}</div>}
                 {props.metrics.data && <div>: {companyMetrics('effectiveTaxRateTTM')}</div>}
