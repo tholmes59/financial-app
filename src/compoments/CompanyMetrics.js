@@ -114,6 +114,12 @@ const CompanyMetrics = (props) => {
                 {props.metrics.data && <div>: {companyMetrics('priceToFreeCashFlowsRatioTTM')}</div>}
                 {props.metrics.data && <div>: {companyMetrics('priceToOperatingCashFlowsRatioTTM')}</div>}
                 {props.metrics.data && <div>: {companyMetrics('quickRatioTTM')}</div>}
+                {props.metrics.data && <div>: {companyMetrics('receivablesTurnoverTTM')}</div>}
+                {props.metrics.data && <div>: {companyMetrics('returnOnAssetsTTM')}</div>}
+                {props.metrics.data && <div>: {companyMetrics('returnOnCapitalEmployedTTM')}</div>}
+                {props.metrics.data && <div>: {companyMetrics('returnOnEquityTTM')}</div>}
+                {props.metrics.data && <div>: {companyMetrics('shortTermCoverageRatiosTTM')}</div>}
+                {props.metrics.data && <div>: {companyMetrics('totalDebtToCapitalizationTTM')}</div>}
             </div>
         )}
         </>
