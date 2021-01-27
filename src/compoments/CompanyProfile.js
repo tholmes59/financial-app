@@ -49,7 +49,7 @@ console.log(percentChange)
     return (
         <div>
           <div className="full-name-container">
-            {props.company.data && <img alt="CompanyLogo" src={props.company.data.map(x => x.image)}></img>}
+            {props.company.data && <a href={props.company.data.map(x => x.website)} target="_blank" rel="noopener noreferrer"><img alt="CompanyLogo" src={props.company.data.map(x => x.image)}></img></a>}
             <div className="name-container">
               {props.company.data && props.company.data.map(x => <div>{x.companyName} ({x.symbol})</div>)}
               {props.company.data && props.company.data.map(x => <div>{x.exchangeShortName} - {x.exchange} Currency in {x.currency}</div>)}
