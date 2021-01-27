@@ -5,7 +5,10 @@ import CompanyMetrics from './CompanyMetrics'
 import News from './News'
 
 const ResultsContainer = ({company, metrics, news, price, loading}) => {
-
+    
+    if (company.data){
+        return <h2>Please enter valid ticker</h2>
+    }
     if (loading) {
         return <h2>Loading...</h2>
     }
