@@ -5,8 +5,8 @@ import CompanyMetrics from './CompanyMetrics'
 import News from './News'
 
 const ResultsContainer = ({company, metrics, news, price, loading}) => {
-    
-    if (company.data){
+    console.log(company)
+    if (company.data && company.data.length < 1){
         return <h2>Please enter valid ticker</h2>
     }
     if (loading) {
