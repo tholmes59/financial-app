@@ -58,6 +58,17 @@ body{
     padding: 1rem;
 }
 
+/* ******************Loading Spinner************************** */
+
+.spinner-container{
+    margin-top: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+  
+
 /* ***************Company Profile Component**************** */
 
 .full-name-container{
