@@ -19,6 +19,21 @@ const CompanyMetrics = (props) => {
         {props.metrics.data && (
             <div>
                 <div>Valuation Metrics</div>
+                <div>
+                    Profitability Ratios
+                </div>
+                <div>
+                    Liquidity Ratios
+                </div>
+                <div>
+                    Activity Ratios
+                </div>
+                <div>
+                    Leverage Ratios
+                </div>
+                <div>
+                    Market Ratios
+                </div>
                 {props.metrics.data && <div>P/E Ratio: {companyMetrics('peRatioTTM')}</div>}
                 {props.metrics.data && <div>PEG Ratio: {companyMetrics('pegRatioTTM')}</div>}
                 {props.metrics.data && <div>P/B: {companyMetrics('priceToBookRatioTTM')}</div>}
