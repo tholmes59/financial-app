@@ -37,10 +37,12 @@ const CompanyMetrics = (props) => {
                     <div>
                         Liquidity Ratios
                     </div>
-                        {props.metrics.data && <div>Cash Ratio: {companyMetrics('cashRatioTTM')}</div>}
-                        {props.metrics.data && <div>Quick Ratio: {companyMetrics('quickRatioTTM')}</div>}
-                        {props.metrics.data && <div>Current Ratio: {companyMetrics('currentRatioTTM')}</div>}
-                        {props.metrics.data && <div>Short Term Coverage Ratio: {companyMetrics('shortTermCoverageRatiosTTM')}</div>}
+                    <table>
+                        {props.metrics.data && <tr><td>Cash Ratio:</td> <td>{companyMetrics('cashRatioTTM')}</td></tr>}
+                        {props.metrics.data && <tr><td>Quick Ratio:</td> <td>{companyMetrics('quickRatioTTM')}</td></tr>}
+                        {props.metrics.data && <tr><td>Current Ratio:</td> <td>{companyMetrics('currentRatioTTM')}</td></tr>}
+                        {props.metrics.data && <tr><td>Short Term Coverage Ratio:</td> <td>{companyMetrics('shortTermCoverageRatiosTTM')}</td></tr>}
+                    </table>
                     <div>
                         Activity Ratios
                     </div>
