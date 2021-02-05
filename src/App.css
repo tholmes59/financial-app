@@ -122,3 +122,21 @@ body{
 .news-title:hover{
     color: #0f69ff;
 }
+
+/* ********************Company Metrics Component***************************** */
+
+.valuation-metrics-container table {
+    margin: 5px 0;
+    border-spacing: 0;
+}
+
+.valuation-metrics-container table tr{
+    height: 36px;
+    display: table-row;
+}
+.valuation-metrics-container table td{
+    width: 94%;
+    margin: 5px 0;
+    font-size: .95rem;
+    border-bottom: 1px solid #e0e4e9;
+}
