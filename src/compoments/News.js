@@ -44,7 +44,7 @@ const News = (props) => {
     return (
         <div>
             <div>
-                {props.news.data && <div>In the news</div>}
+                {props.news.data && <h1>In the news</h1>}
                 {newsCards}
             </div>
         </div>
