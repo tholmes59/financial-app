@@ -143,3 +143,7 @@ body{
     border-bottom: 1px solid #e0e4e9;
     width: 100%;
 }
+
+.valuation-metrics-container > table > tr > td:nth-child(even){
+    text-align: right;
+}
