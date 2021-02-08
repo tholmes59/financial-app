@@ -78,23 +78,25 @@ const CompanyMetrics = (props) => {
                     <h3>
                         Market Ratios
                     </h3>
-                        {props.metrics.data && <div>P/E Ratio: {companyMetrics('peRatioTTM')}</div>}
-                        {props.metrics.data && <div>PEG Ratio: {companyMetrics('pegRatioTTM')}</div>}
-                        {props.metrics.data && <div>P/B: {companyMetrics('priceToBookRatioTTM')}</div>}
-                        {props.metrics.data && <div>P/S: {companyMetrics('priceToSalesRatioTTM')}</div>}
-                        {props.metrics.data && <div>Dividend Yield: {companyMetrics('dividendYieldTTM')}</div>}
-                        {props.metrics.data && <div>Dividend Yield %: {companyMetrics('dividendYielPercentageTTM')}</div>}
-                        {props.metrics.data && <div>Payout Ratio: {companyMetrics('payoutRatioTTM')}</div>}
-                        {props.metrics.data && <div>Cash per Share: {companyMetrics('cashPerShareTTM')}</div>}
-                        {props.metrics.data && <div>Free Cash Flow per Share: {companyMetrics('freeCashFlowPerShareTTM')}</div>}
-                        {props.metrics.data && <div>Operating Cash Flow per Share: {companyMetrics('operatingCashFlowPerShareTTM')}</div>}
-                        {props.metrics.data && <div>Price to Cash Flow Ratio: {companyMetrics('priceCashFlowRatioTTM')}</div>}
-                        {props.metrics.data && <div>Price Fair Value: {companyMetrics('priceFairValueTTM')}</div>}
-                        {props.metrics.data && <div>Price to Free Cash Flow Ratio: {companyMetrics('priceToFreeCashFlowsRatioTTM')}</div>}
-                        {props.metrics.data && <div>Price to Operating Cash Flow Ratio: {companyMetrics('priceToOperatingCashFlowsRatioTTM')}</div>}
-                        {props.metrics.data && <div>Free Cash Flow to Operating Cash Flow Ratio: {companyMetrics('freeCashFlowOperatingCashFlowRatioTTM')}</div>}
-                        {props.metrics.data && <div>Operating Cash Flow to Sales Ratio: {companyMetrics('operatingCashFlowSalesRatioTTM')}</div>}
-                        {props.metrics.data && <div>Enterprise Value Multiple: {companyMetrics('enterpriseValueMultipleTTM')}</div>}
+                    <table>
+                        {props.metrics.data && <tr><td>P/E Ratio:</td> <td>{companyMetrics('peRatioTTM')}</td></tr>}
+                        {props.metrics.data && <tr><td>PEG Ratio:</td> <td>{companyMetrics('pegRatioTTM')}</td></tr>}
+                        {props.metrics.data && <tr><td>P/B:</td> <td>{companyMetrics('priceToBookRatioTTM')}</td></tr>}
+                        {props.metrics.data && <tr><td>P/S:</td> <td>{companyMetrics('priceToSalesRatioTTM')}</td></tr>}
+                        {props.metrics.data && <tr><td>Dividend Yield:</td> <td>{companyMetrics('dividendYieldTTM')}</td></tr>}
+                        {props.metrics.data && <tr><td>Dividend Yield %:</td> <td>{companyMetrics('dividendYielPercentageTTM')}</td></tr>}
+                        {props.metrics.data && <tr><td>Payout Ratio:</td> <td>{companyMetrics('payoutRatioTTM')}</td></tr>}
+                        {props.metrics.data && <tr><td>Cash per Share:</td> <td>{companyMetrics('cashPerShareTTM')}</td></tr>}
+                        {props.metrics.data && <tr><td>Free Cash Flow per Share:</td> <td>{companyMetrics('freeCashFlowPerShareTTM')}</td></tr>}
+                        {props.metrics.data && <tr><td>Operating Cash Flow per Share:</td> <td>{companyMetrics('operatingCashFlowPerShareTTM')}</td></tr>}
+                        {props.metrics.data && <tr><td>Price to Cash Flow Ratio:</td> <td>{companyMetrics('priceCashFlowRatioTTM')}</td></tr>}
+                        {props.metrics.data && <tr><td>Price Fair Value:</td> <td>{companyMetrics('priceFairValueTTM')}</td></tr>}
+                        {props.metrics.data && <tr><td>Price to Free Cash Flow Ratio:</td> <td>{companyMetrics('priceToFreeCashFlowsRatioTTM')}</td></tr>}
+                        {props.metrics.data && <tr><td>Price to Operating Cash Flow Ratio:</td> <td>{companyMetrics('priceToOperatingCashFlowsRatioTTM')}</td></tr>}
+                        {props.metrics.data && <tr><td>Free Cash Flow to Operating Cash Flow Ratio:</td> <td>{companyMetrics('freeCashFlowOperatingCashFlowRatioTTM')}</td></tr>}
+                        {props.metrics.data && <tr><td>Operating Cash Flow to Sales Ratio:</td> <td>{companyMetrics('operatingCashFlowSalesRatioTTM')}</td></tr>}
+                        {props.metrics.data && <tr><td>Enterprise Value Multiple:</td> <td>{companyMetrics('enterpriseValueMultipleTTM')}</td></tr>}
+                    </table>
             </div>
         )}
         </>
