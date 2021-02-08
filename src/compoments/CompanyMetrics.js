@@ -62,16 +62,19 @@ const CompanyMetrics = (props) => {
                     <h3>
                         Leverage Ratios
                     </h3>
-                        {props.metrics.data && <div>Debt Ratio: {companyMetrics('debtRatioTTM')}</div>}
-                        {props.metrics.data && <div>Debt to Equity Ratio: {companyMetrics('debtEquityRatioTTM')}</div>}
-                        {props.metrics.data && <div>Interest Coverage Ratio: {companyMetrics('interestCoverageTTM')}</div>}
-                        {props.metrics.data && <div>Cap Ex Coverage Ratio: {companyMetrics('capitalExpenditureCoverageRatioTTM')}</div>}
-                        {props.metrics.data && <div>Dividend Paid and Capex Coverage Ratio: {companyMetrics('dividendPaidAndCapexCoverageRatioTTM')}</div>}
-                        {props.metrics.data && <div>Cash Flow Coverage Ratio: {companyMetrics('cashFlowCoverageRatiosTTM')}</div>}
-                        {props.metrics.data && <div>Long Term Debt to Capitalization: {companyMetrics('longTermDebtToCapitalizationTTM')}</div>}
-                        {props.metrics.data && <div>Total Debt to Capitalization Ratio: {companyMetrics('totalDebtToCapitalizationTTM')}</div>}
-                        {props.metrics.data && <div>Cash Flow to Debt Ratio: {companyMetrics('cashFlowToDebtRatioTTM')}</div>}
-                        {props.metrics.data && <div>Company Equity Multiplier: {companyMetrics('companyEquityMultiplierTTM')}</div>}
+                    <table>
+                        {props.metrics.data && <tr><td>Debt Ratio:</td> <td>{companyMetrics('debtRatioTTM')}</td></tr>}
+                        {props.metrics.data && <tr><td>Debt to Equity Ratio:</td> <td>{companyMetrics('debtEquityRatioTTM')}</td></tr>}
+                        {props.metrics.data && <tr><td>Interest Coverage Ratio:</td> <td>{companyMetrics('interestCoverageTTM')}</td></tr>}
+                        {props.metrics.data && <tr><td>Cap Ex Coverage Ratio:</td> <td>{companyMetrics('capitalExpenditureCoverageRatioTTM')}</td></tr>}
+                        {props.metrics.data && <tr><td>Dividend Paid and Capex Coverage Ratio:</td> <td>{companyMetrics('dividendPaidAndCapexCoverageRatioTTM')}</td></tr>}
+                        {props.metrics.data && <tr><td>Cash Flow Coverage Ratio:</td> <td>{companyMetrics('cashFlowCoverageRatiosTTM')}</td></tr>}
+                        {props.metrics.data && <tr><td>Long Term Debt to Capitalization:</td> <td>{companyMetrics('longTermDebtToCapitalizationTTM')}</td></tr>}
+                        {props.metrics.data && <tr><td>Total Debt to Capitalization Ratio:</td> <td>{companyMetrics('totalDebtToCapitalizationTTM')}</td></tr>}
+                        {props.metrics.data && <tr><td>Cash Flow to Debt Ratio:</td> <td>{companyMetrics('cashFlowToDebtRatioTTM')}</td></tr>}
+                        {props.metrics.data && <tr><td>Company Equity Multiplier:</td> <td>{companyMetrics('companyEquityMultiplierTTM')}</td></tr>}
+
+                    </table>
                     <h3>
                         Market Ratios
                     </h3>
