@@ -46,17 +46,19 @@ const CompanyMetrics = (props) => {
                     <h3>
                         Activity Ratios
                     </h3>
-                        {props.metrics.data && <div>Receivables Turnover: {companyMetrics('receivablesTurnoverTTM')}</div>}
-                        {props.metrics.data && <div>Days Sales Outstanding: {companyMetrics('daysOfSalesOutstandingTTM')}</div>}
-                        {props.metrics.data && <div>Inventory Turnover: {companyMetrics('inventoryTurnoverTTM')}</div>}
-                        {props.metrics.data && <div>Fixed Asset Turnover: {companyMetrics('fixedAssetTurnoverTTM')}</div>}
-                        {props.metrics.data && <div>Asset Turnover: {companyMetrics('assetTurnoverTTM')}</div>}
-                        {props.metrics.data && <div>Operating Cycle: {companyMetrics('operatingCycleTTM')}</div>}
-                        {props.metrics.data && <div>Days Inventory Outstanding: {companyMetrics('daysOfInventoryOutstandingTTM')}</div>}
-                        {props.metrics.data && <div>Payables Turnover: {companyMetrics('payablesTurnoverTTM')}</div>}
-                        {props.metrics.data && <div>Days Payables Outstanding: {companyMetrics('daysOfPayablesOutstandingTTM')}</div>}
-                        {props.metrics.data && <div>Cash Conversion Cycle: {companyMetrics('cashConversionCycleTTM')}</div>}
-                        {props.metrics.data && <div>Effective Tax Rate: {companyMetrics('effectiveTaxRateTTM')}</div>}
+                    <table>
+                        {props.metrics.data && <tr><td>Receivables Turnover:</td> <td>{companyMetrics('receivablesTurnoverTTM')}</td></tr>}
+                        {props.metrics.data && <tr><td>Days Sales Outstanding:</td> <td>{companyMetrics('daysOfSalesOutstandingTTM')}</td></tr>}
+                        {props.metrics.data && <tr><td>Inventory Turnover:</td> <td>{companyMetrics('inventoryTurnoverTTM')}</td></tr>}
+                        {props.metrics.data && <tr><td>Fixed Asset Turnover:</td> <td>{companyMetrics('fixedAssetTurnoverTTM')}</td></tr>}
+                        {props.metrics.data && <tr><td>Asset Turnover:</td> <td>{companyMetrics('assetTurnoverTTM')}</td></tr>}
+                        {props.metrics.data && <tr><td>Operating Cycle:</td> <td>{companyMetrics('operatingCycleTTM')}</td></tr>}
+                        {props.metrics.data && <tr><td>Days Inventory Outstanding:</td> <td>{companyMetrics('daysOfInventoryOutstandingTTM')}</td></tr>}
+                        {props.metrics.data && <tr><td>Payables Turnover:</td> <td>{companyMetrics('payablesTurnoverTTM')}</td></tr>}
+                        {props.metrics.data && <tr><td>Days Payables Outstanding:</td> <td>{companyMetrics('daysOfPayablesOutstandingTTM')}</td></tr>}
+                        {props.metrics.data && <tr><td>Cash Conversion Cycle:</td> <td>{companyMetrics('cashConversionCycleTTM')}</td></tr>}
+                        {props.metrics.data && <tr><td>Effective Tax Rate:</td> <td>{companyMetrics('effectiveTaxRateTTM')}</td></tr>}
+                    </table>
                     <h3>
                         Leverage Ratios
                     </h3>
