@@ -1,12 +1,33 @@
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body{
     font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    /* min-height: 100vh;
+    min-width: 100vw; */
+    /* height: 100%; */
 }
+
+/* #root{
+    min-width: 100vw;
+} */
+
+/* .App {
+    position: relative;
+    min-height: 100vh;
+    min-width: 100vw;
+} */
 
 /* ************************Header******************************** */
 
-.header{
-    padding: 4rem;
+header{
+    position: relative;
+    height: 8rem;
     background: #003049;
+    width: 100%;
 }
 /* ***********************Search forms**************************** */
 
@@ -138,7 +159,6 @@ body{
     border-bottom: 1px solid #e0e4e9;
 }
 .valuation-metrics-container > table > tr > td{
-   
     font-size: .95rem;
     border-bottom: 1px solid #e0e4e9;
     width: 100%;
@@ -146,4 +166,16 @@ body{
 
 .valuation-metrics-container > table > tr > td:nth-child(even){
     text-align: right;
+}
+
+/* ********************Responsive************************************ */
+
+@media only screen and (max-width : 768px){
+    .results-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+        padding: 1rem;
+    }
 }
