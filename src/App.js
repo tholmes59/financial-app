@@ -71,11 +71,12 @@ function App() {
 
     fetchPrice(companyTicker)
 
-    let name = companyData && companyData.map(x => 
-      x.companyName.split(' ').shift()
-      )
-    console.log(name)
-    fetchCompanyNews(name)
+    // let name = companyData && companyData.map(x => 
+    //   x.companyName.split(' ').shift()
+    //   )
+    // console.log(name)
+    // fetchCompanyNews(name)
+    fetchCompanyNews(companyData)
     fetchKeyMetrics(companyTicker)
 
     // let logoUrl = companyData && companyData.map(x => 
@@ -90,7 +91,9 @@ function App() {
   console.log(company.data)
 
   async function fetchCompanyNews(e) {
-    let name = e
+    let name = e.map(x => 
+      x.companyName.split(' ').shift()
+      )
     const companyNews = await fetch(`https://newsapi.org/v2/everything?q=${name}&language=en&apiKey=236f90419a1d4edd8fc1e698c62220af`)
       .then(res => res.json())
       .then(data => data)
