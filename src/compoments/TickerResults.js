@@ -46,7 +46,7 @@ const TickerResults = (props) => {
         {props.ticker.data && 
          <div id="tickerResults">
             {props.ticker.data && <div onClick={props.closeWindow}>x</div>}
-            {props.ticker.data && props.ticker.data.map(x => <p name="ticker" onClick={handleClick}>{x.symbol} | {x.name} | {x.exchangeShortName}</p>)}
+            {props.ticker.data && props.ticker.data.map(x => <div name="ticker" className="ticker-search-results" onClick={handleClick}>{x.symbol} | {x.name} | {x.exchangeShortName}</div>)}
             {props.ticker.error && <p>{props.ticker.error}</p>}
         </div>
         
