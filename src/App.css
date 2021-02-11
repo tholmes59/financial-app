@@ -193,6 +193,11 @@ header{
         font-size: 17px;
         width: 50px;
     }
+
+    #tickerResults{
+        width: 270px;
+        font-size: .9rem;
+    }
 }
 
 @media only screen and (max-width : 480px){
