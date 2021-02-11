@@ -218,4 +218,9 @@ header{
         font-size: 12px;
         width: 50px;
     }
+
+    #tickerResults{
+        width: 250px;
+        font-size: .9rem;
+    }
 }
