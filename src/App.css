@@ -63,11 +63,21 @@ header{
 
 #tickerResults{
     position: absolute;
-    width: 370px;
+    width: 380px;
     background: white;
     border: 1px solid grey;
-    padding: 8px;
+    /* padding: 8px; */
     z-index: 10;
+    font-size: .9rem;
+}
+
+.ticker-search-results{
+    padding: 8px;
+}
+
+.ticker-search-results:hover{
+    background: #bdbfbc;
+    cursor: pointer;
 }
 
 /* *************************Results********************************* */
