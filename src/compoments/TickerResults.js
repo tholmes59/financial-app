@@ -18,7 +18,7 @@ const TickerResults = (props) => {
     if (props.tickerError){
         return(
             <div id="tickerResults">
-            {props.tickerError && <div onClick={props.closeWindow}>x</div>}
+            {props.tickerError && <div onClick={props.closeWindow} className="close-ticker-results">x</div>}
             {props.tickerError && <p>{props.tickerError}</p>}
         </div>
         )
@@ -27,7 +27,7 @@ const TickerResults = (props) => {
     if (props.ticker.error){
         return(
             <div id="tickerResults">
-            {props.ticker.error && <div onClick={props.closeWindow}>x</div>}
+            {props.ticker.error && <div onClick={props.closeWindow} className="close-ticker-results">x</div>}
             {props.ticker.error && <p>{props.ticker.error}</p>}
         </div>
         )
@@ -45,8 +45,8 @@ const TickerResults = (props) => {
         } */}
         {props.ticker.data && 
          <div id="tickerResults">
-            {props.ticker.data && <div onClick={props.closeWindow}>x</div>}
-            {props.ticker.data && props.ticker.data.map(x => <div name="ticker" className="ticker-search-results" onClick={handleClick}>{x.symbol} | {x.name} | {x.exchangeShortName}</div>)}
+            {props.ticker.data && <div onClick={props.closeWindow} className="close-ticker-results">x</div>}
+            {props.ticker.data && props.ticker.data.map(x => <div name="ticker" className="ticker-search-results" onClick={handleClick}>{x.symbol}  {x.name}  {x.exchangeShortName}</div>)}
             {props.ticker.error && <p>{props.ticker.error}</p>}
         </div>
         
