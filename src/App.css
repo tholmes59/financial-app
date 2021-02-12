@@ -80,6 +80,16 @@ header{
     cursor: pointer;
 }
 
+.close-ticker-results{
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: .5em;
+}
+
+.close-ticker-results:hover{
+    cursor: pointer;
+}
+
 /* *************************Results********************************* */
 .results-container{
     display: grid;
