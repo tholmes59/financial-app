@@ -243,4 +243,12 @@ header{
         width: 250px;
         font-size: .9rem;
     }
+
+    .news-card-container{
+        font-size: .9rem;
+    }
+
+    .valuation-metrics-container{
+        font-size: .9rem;
+    }
 }
