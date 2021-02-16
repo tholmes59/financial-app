@@ -19,7 +19,7 @@ const Header = () => {
 
     return(
         <header>
-            
+            <h2>InvestorInfo</h2>
         </header>
     )
 }
