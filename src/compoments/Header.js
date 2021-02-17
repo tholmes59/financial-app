@@ -10,16 +10,20 @@ const Header = () => {
             const quote = await fetch(`https://api.quotable.io/random`)
             .then(res => res.json())
             .then(data => data)
-            setQuote({data: quote})
+            setQuote(quote)
         }
         loadQuote()
     }, [])
 
-    console.log(quote)
+    console.log(quote.content)
+    // let author = quote.data.map(x => x.author)
+
 
     return(
         <header>
             <h2>InvestorInfo</h2>
+            <p>"{quote.content}"</p>
+            <p>-{quote.author}</p>
         </header>
     )
 }
