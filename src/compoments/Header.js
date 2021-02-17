@@ -17,9 +17,11 @@ const Header = () => {
   
     return(
         <header>
-            <h2>InvestorInfo</h2>
-            <p>"{quote.content}"</p>
-            <p>-{quote.author}</p>
+            <div className="header-container">
+                <h2>InvestorInfo</h2>
+                <div>"{quote.content}"</div>
+                <div>-{quote.author}</div>
+            </div>
         </header>
     )
 }
