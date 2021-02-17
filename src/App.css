@@ -25,7 +25,7 @@ body{
 
 header{
     position: relative;
-    height: 8rem;
+    height: auto;
     background: #003049;
     width: 100%;
     color: #edf2f5;
@@ -34,9 +34,12 @@ header{
     justify-content: center;
 }
 
-/* header h2{
+.header-container{
     color: #edf2f5;
-} */
+    text-align: center;
+    margin: 10px;
+    padding: 10px 5px;
+}
 /* ***********************Search forms**************************** */
 
 .search-container{
