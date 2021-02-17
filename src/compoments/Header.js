@@ -14,11 +14,7 @@ const Header = () => {
         }
         loadQuote()
     }, [])
-
-    console.log(quote.content)
-    // let author = quote.data.map(x => x.author)
-
-
+  
     return(
         <header>
             <h2>InvestorInfo</h2>
