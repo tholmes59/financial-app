@@ -28,7 +28,15 @@ header{
     height: 8rem;
     background: #003049;
     width: 100%;
+    color: #edf2f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+/* header h2{
+    color: #edf2f5;
+} */
 /* ***********************Search forms**************************** */
 
 .search-container{
