@@ -38,11 +38,6 @@ function App() {
               error: "please enter valid company name"
             })
           }
-          if(symbol.data && symbol.data.length === 0){
-            setTickerError(
-              "please enter valid company name"
-            )
-          }
   }
   console.log(symbol)
   console.log(symbol.data && symbol.data.length)
