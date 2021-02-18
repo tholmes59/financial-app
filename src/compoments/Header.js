@@ -18,7 +18,7 @@ const Header = () => {
     return(
         <header>
             <div className="header-container">
-                <h2>InvestorInfo</h2>
+                <div className="header-title">InvestorInfo</div>
                 <div>"{quote.content}"</div>
                 <div>-{quote.author}</div>
             </div>
