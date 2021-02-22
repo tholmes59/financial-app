@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import CompanyProfile from './CompanyProfile'
 import StockChart from './StockChart'
 import CompanyMetrics from './CompanyMetrics'
@@ -6,6 +6,13 @@ import News from './News'
 import LoadingSpinner from './LoadingSpinner'
 
 const ResultsContainer = ({company, metrics, news, price, loading}) => {
+    console.log(news && news.data)
+    const [currentPage, setCurrentPage] = useState(1);
+    const [storiesPerPage] = useState(10);
+
+    const indexOfLastStory = currentPage * storiesPerPage;
+    const indexOfFirstStory = indexOfLastStory - storiesPerPage;
+    const currentStories = news.data && news.data.articles.slice(indexOfFirstStory, indexOfLastStory);
    
     if (loading) {
         return (
@@ -19,7 +26,7 @@ const ResultsContainer = ({company, metrics, news, price, loading}) => {
             <CompanyProfile company={company}/>
             <StockChart price={price}/>
             <CompanyMetrics metrics={metrics}/>
-            <News news={news}/>
+            <News news={currentStories}/>
         </div>
     )
 }
