@@ -37,14 +37,14 @@ const News = (props) => {
 
     // console.log(news)
     const newsCards = 
-        props.news.data && props.news.data.articles.map((news, id) => 
+        props.news && props.news.map((news, id) => 
             <NewsCard key={id} news={news}/>
         )
 
     return (
         <div>
             <div>
-                {props.news.data && <h1>In the news</h1>}
+                {props.news && <h1>In the news</h1>}
                 {newsCards}
             </div>
         </div>
