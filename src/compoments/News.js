@@ -1,15 +1,25 @@
-import React from 'react'
+import React, {useState} from 'react'
 import NewsCard from './NewsCard'
+import Pagination from './Pagination'
 
-const News = (props) => {
+const News = ({news}) => {
     // console.log(props.news.news && props.news.news)
     // const [news, setNews] = useState([])
-    console.log(props)
+    // console.log(news && news.length)
+    // let storiesLength = news && news.length
+    // console.log(news.data.articles)
+    const [currentPage, setCurrentPage] = useState(1);
+    const [storiesPerPage] = useState(5);
 
+    const indexOfLastStory = currentPage * storiesPerPage;
+    const indexOfFirstStory = indexOfLastStory - storiesPerPage;
+    const currentStories = news.data && news.data.articles.slice(indexOfFirstStory, indexOfLastStory);
+    const totalStories = news.data && news.data.articles.length
     // let name = props.news.data && props.news.data.map(x => 
     //     x.companyName.split(' ').shift()
     //     )
-
+    console.log(currentStories)
+    console.log(totalStories)
   
 
     // async function fetchCompanyNews() {
@@ -36,16 +46,27 @@ const News = (props) => {
     //     }, []);
 
     // console.log(news)
+
+    const paginate = pageNumber => setCurrentPage(pageNumber);
+
     const newsCards = 
-        props.news && props.news.map((news, id) => 
+        news.data && currentStories.map((news, id) => 
             <NewsCard key={id} news={news}/>
         )
+        // news && news.data.articles.map((news, id) => 
+        //     <NewsCard key={id} news={news}/>
+        // )
 
     return (
         <div>
             <div>
-                {props.news && <h1>In the news</h1>}
+                {news.data && <h1>In the news</h1>}
                 {newsCards}
+                <Pagination 
+                    storiesPerPage={storiesPerPage}
+                    totalStories={totalStories}
+                    paginate={paginate}
+                 />
             </div>
         </div>
     )
