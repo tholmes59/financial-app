@@ -13,7 +13,7 @@ const Pagination = ({ storiesPerPage, totalStories, paginate }) => {
     }
 
     return (
-        <nav>
+        <nav className="pagination-nav-container">
             <ul>
                 {pageNumbers.map(number => (
                 <li key={number}>
