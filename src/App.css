@@ -199,6 +199,16 @@ header{
     object-fit: contain;
 }
 
+.pagination-nav-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.pagination-nav-container li {
+    display: inline;
+}
+
 /* ********************Company Metrics Component***************************** */
 
 .valuation-metrics-container table {
