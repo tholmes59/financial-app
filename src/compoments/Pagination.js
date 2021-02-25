@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const Pagination = ({ storiesPerPage, totalStories, paginate }) => {
+const Pagination = ({ storiesPerPage, totalStories, paginate, currentPage }) => {
 
     console.log(storiesPerPage)
     console.log(totalStories)
@@ -16,7 +16,7 @@ const Pagination = ({ storiesPerPage, totalStories, paginate }) => {
         <nav className="pagination-nav-container">
             <ul>
                 {pageNumbers.map(number => (
-                <li key={number}>
+                <li key={number} className={`page-item${ currentPage === number ? ' active' : ''}`}>
                     <button onClick={() => paginate(number)} >
                     {number}
                     </button>
