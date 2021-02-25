@@ -66,6 +66,7 @@ const News = ({news}) => {
                     storiesPerPage={storiesPerPage}
                     totalStories={totalStories}
                     paginate={paginate}
+                    currentPage={currentPage}
                  />
             </div>
         </div>
