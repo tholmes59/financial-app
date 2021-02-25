@@ -209,6 +209,12 @@ header{
     display: inline;
 }
 
+.pagination-nav-container li.page-item.active button{
+    color: saturate(darken(#ced4da, 50%), 5%);
+    background-color: saturate(lighten(#ced4da, 7.5%), 2.5%);
+    border-color: #ced4da;
+}
+
 .pagination-nav-container button{
     background: none;
     /* color: blue; */
@@ -217,7 +223,7 @@ header{
 }
 
 .pagination-nav-container button:hover{
-    background: #FFA647;
+    background: #ced4da;
     cursor: pointer;
 }
 
