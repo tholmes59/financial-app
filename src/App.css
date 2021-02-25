@@ -209,6 +209,18 @@ header{
     display: inline;
 }
 
+.pagination-nav-container button{
+    background: none;
+    /* color: blue; */
+    margin-left: -1px;
+    padding: .5rem;
+}
+
+.pagination-nav-container button:hover{
+    background: #FFA647;
+    cursor: pointer;
+}
+
 /* ********************Company Metrics Component***************************** */
 
 .valuation-metrics-container table {
