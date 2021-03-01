@@ -23,7 +23,7 @@ function Quote() {
     }
 
     return (
-        <div>
+        <div className="quote-container">
             <div>"{quote.content}"</div>
             <div>-{quote.author}</div>
         </div>
