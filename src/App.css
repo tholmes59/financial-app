@@ -317,6 +317,11 @@ header{
         font-size: .9rem;
     }
 
+    .quote-container{
+        font-size: .9rem;
+        padding: 0 20px;
+    }
+
     .news-card-container{
         font-size: .9rem;
     }
