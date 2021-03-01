@@ -19,7 +19,7 @@ function Quote() {
     }, [])
 
     if(loading){
-        return <LoadingSpinner/>
+        return <i class="fa fa-spinner fa-spin" style={{fontSize:"2rem"}}></i>
     }
 
     return (
