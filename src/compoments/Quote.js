@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import LoadingSpinner from './LoadingSpinner';
 
 function Quote() {
 
@@ -16,6 +17,10 @@ function Quote() {
         }
         loadQuote()
     }, [])
+
+    if(loading){
+        return <LoadingSpinner/>
+    }
 
     return (
         <div>
