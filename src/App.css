@@ -373,4 +373,38 @@ header{
     .valuation-metrics-container{
         font-size: .9rem;
     }
+
+    .news-title{
+        font-size: 0.75rem;
+    }
+    
+    .news-title:hover{
+        color: #0f69ff;
+    }
+    
+    /* .news-image-container{
+        height: auto;
+    } */
+    .news-image-container img{
+        width: 90px;
+        margin: 0 10px;
+        object-fit: contain;
+    }
+
+    .news-container p {
+        margin: .5em 0;
+    }
+
+    .news-author{
+        font-size: .6rem;
+    }
+
+    .news-source{
+        font-size: .6rem;
+    }
+
+    .news-description{
+        font-size: .6rem;
+    }
+    
 }
