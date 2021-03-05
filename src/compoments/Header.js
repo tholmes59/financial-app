@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Quote from './Quote';
+import logo from '../assets/investorInfoLogo2.png'
 
 
 const Header = () => {
@@ -19,7 +20,8 @@ const Header = () => {
     return(
         <header>
             <div className="header-container">
-                <div className="header-title">InvestorInfo</div>
+               <img src={logo} alt=""/>
+                {/* <div className="header-title">InvestorInfo</div> */}
                 {/* <div>"{quote.content}"</div>
                 <div>-{quote.author}</div> */}
                 <Quote/>
