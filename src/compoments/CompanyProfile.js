@@ -48,9 +48,7 @@ if(priceChange < 0){
 console.log(percentChange)   
 
 const fiftyTwoWeek = (val) => {
-  console.log(val)
   let temp = val[0].split('-')
-  console.log(temp)
   let low = Number(temp[0]).toFixed(2)
   let high = Number(temp[1]).toFixed(2)
   return `${low} - ${high}`
