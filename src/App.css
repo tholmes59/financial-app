@@ -29,22 +29,40 @@ header{
     background: #003049;
     width: 100%;
     color: #edf2f5;
-    display: flex;
+    /* display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
 }
 
 .header-container{
     color: #edf2f5;
     text-align: center;
     margin: 10px 0 20px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     /* padding: 10px 5px; */
+}
+
+.header-container img{
+    width: 200px;
+    margin: 0 10px;
 }
 
 .header-title{
     font-size: 2.5rem;
     /* margin: 10px 0; */
     margin-bottom: 10px;
+}
+
+.quote-container{
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
 }
 /* ***********************Search forms**************************** */
 
