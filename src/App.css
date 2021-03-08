@@ -38,7 +38,7 @@ header{
 .header-container{
     color: #edf2f5;
     text-align: center;
-    margin: 10px 0 20px 0;
+    /* padding: 10px 0 20px 0; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -46,8 +46,8 @@ header{
 }
 
 .header-container img{
-    width: 200px;
-    margin: 0 10px;
+    width: 150px;
+    margin: 0 40px;
 }
 
 .header-title{
@@ -56,14 +56,17 @@ header{
     margin-bottom: 10px;
 }
 
+/* ***********************Quote********************************** */
+
 .quote-container{
-    width: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    background: #f0eff4;
+    padding: 1rem 0;
 }
+
 /* ***********************Search forms**************************** */
 
 .search-container{
