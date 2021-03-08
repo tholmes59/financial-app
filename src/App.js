@@ -5,6 +5,7 @@ import TickerResults from './compoments/TickerResults'
 import SearchCompanyProfile from './compoments/SearchCompanyProfile';
 import ResultsContainer from './compoments/ResultsContainer';
 import Header from './compoments/Header';
+import Quote from './compoments/Quote';
 
 function App() {
   const [loading, setLoading] = useState(false)
@@ -127,6 +128,7 @@ console.log(price)
   return (
     <div className="App">
         <Header />
+        <Quote/>
       <div className="search-container">
         <SearchCompanyProfile getCompanyProfile={fetchCompanyProfile}/>
         <div>
