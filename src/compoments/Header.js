@@ -24,7 +24,7 @@ const Header = () => {
                 {/* <div className="header-title">InvestorInfo</div> */}
                 {/* <div>"{quote.content}"</div>
                 <div>-{quote.author}</div> */}
-                <Quote/>
+                {/* <Quote/> */}
             </div>
         </header>
     )
