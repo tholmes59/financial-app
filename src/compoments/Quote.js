@@ -37,7 +37,7 @@ function Quote() {
     return (
         <div className="quote-container" onClick={changeQuote}>
             <div>"{quote.content}"</div>
-            <div>-{quote.author}</div>
+            <div>- {quote.author}</div>
         </div>
     );
 }
