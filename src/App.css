@@ -67,6 +67,14 @@ header{
     padding: 1rem 0;
 }
 
+#quote-spinner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+   
+}
+
 /* ***********************Search forms**************************** */
 
 .search-container{
