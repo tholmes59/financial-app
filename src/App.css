@@ -75,6 +75,10 @@ header{
     text-align: center;
 }
 
+.quote-container div:hover{
+    cursor: pointer;
+}
+
 #quote-spinner{
     display: flex;
     align-items: center;
