@@ -18,12 +18,24 @@ function Quote() {
         loadQuote()
     }, [])
 
+    const changeQuote = () => {
+        setLoading(true)
+        const loadQuote = async () => {
+            const quote = await fetch(`https://api.quotable.io/random`)
+            .then(res => res.json())
+            .then(data => data)
+            setQuote(quote)
+            setLoading(false)
+        }
+        loadQuote()
+    }
+
     if(loading){
-        return <i class="fa fa-spinner fa-spin" style={{fontSize:"2rem"}}></i>
+        return <i class="fa fa-spinner fa-spin" style={{fontSize:"2rem"}} id="quote-spinner"></i>
     }
 
     return (
-        <div className="quote-container">
+        <div className="quote-container" onClick={changeQuote}>
             <div>"{quote.content}"</div>
             <div>-{quote.author}</div>
         </div>
