@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import TopNewsCard from './TopNewsCard';
 
 const TopNews = () => {
 
@@ -14,11 +15,16 @@ const TopNews = () => {
         loadTopNews()
     }, [])
 
-    console.log(topNews)
+    let articleArry = topNews.news
+    console.log(articleArry)
+
+    let articles = articleArry && articleArry.map((news, id) => 
+        <TopNewsCard key={id} topNews={news}/>
+    )
    
     return (
         <div>
-            
+            {articles}
         </div>
     );
 }
