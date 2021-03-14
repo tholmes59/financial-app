@@ -1,9 +1,10 @@
 import React from 'react';
+import TopNews from './TopNews';
 
-function Home() {
+const Home = () => {
     return (
         <div>
-            
+            <TopNews/>
         </div>
     );
 }
