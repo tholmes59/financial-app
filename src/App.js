@@ -5,7 +5,8 @@ import TickerResults from './compoments/TickerResults'
 import SearchCompanyProfile from './compoments/SearchCompanyProfile';
 import ResultsContainer from './compoments/ResultsContainer';
 import Header from './compoments/Header';
-import Quote from './compoments/Quote';
+import Quote from './compoments/Quote';   
+import Home from './compoments/Home';
 
 function App() {
   const [loading, setLoading] = useState(false)
@@ -16,6 +17,7 @@ function App() {
   const [viewTickers, setViewTickers] = useState(true)
   const [keyMetrics, setKeyMetrics] = useState([])
   const [tickerError, setTickerError] = useState()
+  const [home, setHome] = useState(true)
 
   async function fetchTicker(e) {
     if(!viewTickers) setViewTickers(true)
@@ -62,6 +64,7 @@ function App() {
       .then(res => res.json())
       .then(data => data)
       setCompany({data: companyData})
+      setHome(false)
       setLoading(false)
         console.log(company)
 
@@ -141,7 +144,9 @@ console.log(price)
         <CompanyMetrics metrics={keyMetrics}/>
         <News news={news}/>
         <StockChart price={price}/> */}
-        <ResultsContainer company={company} metrics={keyMetrics} news={news} price={price} loading={loading}/>
+        {/* <ResultsContainer company={company} metrics={keyMetrics} news={news} price={price} loading={loading}/>
+        <TopNews/> */}
+        {home ? <Home/> : <ResultsContainer company={company} metrics={keyMetrics} news={news} price={price} loading={loading}/>}
     </div>
   );
 }
