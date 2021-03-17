@@ -7,7 +7,7 @@ const TopNews = () => {
 
     useEffect(() => {
         const loadTopNews = async () => {
-            const news = await fetch(`https://api.currentsapi.services/v1/latest-news?language=en&apiKey=jByhIdldcnJhFEpjNJXLMwQC3F2hU8FLz274joQg2fsxGHu5`)
+            const news = await fetch(`https://api.currentsapi.services/v1/latest-news?language=en&country=us&keywords=latest&apiKey=jByhIdldcnJhFEpjNJXLMwQC3F2hU8FLz274joQg2fsxGHu5`)
             .then(res => res.json())
             .then(data => data)
             setTopNews(news)
