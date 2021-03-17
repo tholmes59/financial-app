@@ -1,13 +1,13 @@
 import React from 'react';
 import moment from 'moment'
-
+import missing from '../assets/Image-Not-Available.png'
 
 const TopNewsCard = (props) => {
     console.log(props)
     return (
       <div className="news-card-container">
         <div className="news-image-container">
-          <img alt="CompanyLogo" src={props.topNews.image}></img>
+          {props.topNews.image === 'None' ? <img alt='' src={missing}></img> : <img alt='' src={props.topNews.image}></img>}
         </div>
         <div className="news-container">
           <p>
